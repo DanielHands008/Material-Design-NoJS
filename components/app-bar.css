@@ -17,9 +17,9 @@
   min-width: 24px;
   height: 24px;
   margin: 12px;
-
   display: inline-block;
   fill: white;
+  cursor: pointer;
 }
 .app-bar .icon input {
   opacity: 0;

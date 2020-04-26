@@ -2,6 +2,7 @@ hr {
   border: none;
   border-top: 1px solid lightgray;
 }
+
 .thumbnail {
   width: 40px;
   height: 40px;
@@ -9,18 +10,20 @@ hr {
   overflow: hidden;
   display: inline-block;
 }
+
 .card {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   position: relative;
   background-color: white;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 4px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 52px;
 }
+
 .card .title-box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -29,10 +32,12 @@ hr {
   padding-top: 16px;
   padding-bottom: 0px;
 }
+
 .card .title-box+* {
-margin-top: 11px;
-margin-bottom: 0px;
+  margin-top: 11px;
+  margin-bottom: 0px;
 }
+
 .card-title {
   display: inline-block;
   margin-left: 16px;
@@ -41,14 +46,40 @@ margin-bottom: 0px;
   vertical-align: top;
   height: 100%;
 }
+
 .card-title>span {
   display: block;
   font-size: smaller;
   color: gray;
 }
+
 .card .buttons {
   position: absolute;
   bottom: 0px;
   width: 100%;
   padding: 8px;
+}
+
+table {
+  border: 1px solid lightgray;
+  overflow: hidden;
+  border-collapse: collapse;
+  border-radius: 4px;
+  width: 100px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+}
+
+
+table tbody tr:hover {
+  background-color: whitesmoke;
+}
+table tbody tr {
+  border-top: 1px solid lightgray;
+}
+
+table th,
+table td {
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 42px;
 }

@@ -47,7 +47,7 @@ textarea {
 }
 
 button,
-.fab-btn {
+.fab-btn button {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -65,7 +65,7 @@ button,
 }
 
 button:not(.outlined-btn):not(.text-btn):not(:disabled),
-.fab-btn {
+.fab-btn button {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, .12);
 }
 
@@ -95,61 +95,128 @@ button.outlined-btn:disabled {
   border: 1px solid rgba(0, 0, 0, .12);
 }
 
-button:not(:disabled):hover, .fab-btn:hover {
+button:not(:disabled):hover, .fab-btn button:hover {
   cursor: pointer;
   filter: brightness(110%);
 }
 
 button:not(:disabled):not(.outlined-btn):not(.text-btn):hover,
-.fab-btn:hover {
+.fab-btn button:hover {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, .12);
 }
 
 .fab-btn {
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  right: 56px;
+  bottom: 50px;
+  height: 62px;
+  overflow: hidden;
+  transition: height 0ms linear 1500ms;
+}
+.fab-btn:hover {
+  height: 400px;
+  transition: height 0ms linear 0ms;
+}
+.fab-btn button.small {
+  transform: scale(0);
+}
+.fab-btn:hover button.small {
+  transform: scale(1);
+}
+.fab-btn:hover button.small:nth-of-type(2) {
+  transition: transform 200ms ease-in-out 0ms;
+}
+.fab-btn:hover button.small:nth-of-type(3) {
+  transition: transform 200ms ease-in-out 50ms;
+}
+.fab-btn:hover button.small:nth-of-type(4) {
+  transition: transform 200ms ease-in-out 100ms;
+}
+.fab-btn:hover button.small:nth-of-type(5) {
+  transition: transform 200ms ease-in-out 150ms;
+}
+.fab-btn:hover button.small:nth-of-type(6) {
+  transition: transform 200ms ease-in-out 200ms;
+}
+.fab-btn:hover button.small:nth-of-type(7) {
+  transition: transform 200ms ease-in-out 250ms;
+}
+
+.fab-btn button.small:nth-of-type(2) {
+  transition: transform 200ms ease-in-out 1250ms;
+}
+.fab-btn button.small:nth-of-type(3) {
+  transition: transform 200ms ease-in-out 1200ms;
+}
+.fab-btn button.small:nth-of-type(4) {
+  transition: transform 200ms ease-in-out 1150ms;
+}
+.fab-btn button.small:nth-of-type(5) {
+  transition: transform 200ms ease-in-out 1100ms;
+}
+.fab-btn button.small:nth-of-type(6) {
+  transition: transform 200ms ease-in-out 1050ms;
+}
+.fab-btn button.small:nth-of-type(7) {
+  transition: transform 200ms ease-in-out 1000ms;
+}
+.fab-btn button.small:hover {
+  transition: background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+
+.fab-btn button {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  position: fixed;
+  position: relative;
   font-size: large;
-  right: 56px;
-  bottom: 56px;
   border-radius: 100%;
   width: 56px;
   height: 56px;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 56px;
+  min-height: 56px;
   text-align: center;
+  margin-bottom: 6px;
 }
 
-.fab-btn.small {
+.fab-btn button.small {
   width: 40px;
   height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  margin-left: 8px;
+  margin-bottom: 16px;
   padding-left: 13px;
+  background-color: whitesmoke;
+  color: black;
 }
 
 /* Ripple Effect */
 
 button:not(:disabled):hover,
-.fab-btn:hover {
+.fab-btn button:hover {
   background: var(--primary-color, #0091EA) radial-gradient(circle, transparent 1%, var(--primary-color, #0091EA) 1%) center/15000%;
 }
 
 button:not(:disabled).outlined-btn:hover,
-button:not(:disabled).text-btn:hover {
+button:not(:disabled).text-btn:hover,
+.fab-btn button.small:hover {
   background: var(--primary-color, #0001) radial-gradient(circle, transparent 1%, var(--primary-color, #0001) 1%) center/15000%;
 }
 
 button:not(:disabled):active,
 button:not(:disabled).outlined-btn:active,
 button:not(:disabled).text-btn:active,
-.fab-btn:active {
+.fab-btn button:active {
   background-color: #0000;
   background-size: 100%;
   transition: background 0s;
 }
 
 button:not(:disabled):active,
-.fab-btn:active {
+.fab-btn button:active {
   background-color: #6eb9f7;
 }
 
@@ -160,17 +227,17 @@ button:focus {
 
 /* ------------- */
 
-:not(.drawer)>input[type="checkbox"],
+:not(.drawer):not(.menu)>input[type="checkbox"],
  :not(.tabs)>input[type="radio"] {
   display: none;
 }
 
-:not(.drawer)>input[type="checkbox"]+label,
+:not(.drawer):not(.menu)>input[type="checkbox"]+label,
  :not(.tabs)>input[type="radio"]+label {
   cursor: pointer;
 }
 
-:not(.drawer)>input[type="checkbox"]+label:before,
+:not(.drawer):not(.menu)>input[type="checkbox"]+label:before,
  :not(.tabs)>input[type="radio"]+label:before {
   content: '\2000';
   box-sizing: border-box;
@@ -196,7 +263,7 @@ button:focus {
   border-radius: 100%;
 }
 
-:not(.drawer)>input[type="checkbox"]:checked+label:before,
+:not(.drawer):not(.menu)>input[type="checkbox"]:checked+label:before,
  :not(.tabs)>input[type="radio"]:checked+label:before {
   content: '\2714\00FE0E';
   color: white;
@@ -211,7 +278,7 @@ button:focus {
   transform: translateY(4px);
 }
 
-:not(.drawer)>input[type="checkbox"]:disabled+label:before {
+:not(.drawer):not(.menu)>input[type="checkbox"]:disabled+label:before {
   border-color: lightgray;
   background-color: lightgray;
 }
