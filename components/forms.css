@@ -220,6 +220,7 @@ button:not(:disabled):not(.outlined-btn):not(.text-btn):hover {
   padding-right: 0px;
   text-align: center;
   font-size: 24px;
+  font-weight: 500;
 }
 
 .fab-btn button.small {

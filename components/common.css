@@ -165,3 +165,23 @@ ul details summary+* {
   padding: 16px;
   padding-top: 0px;
 }
+
+code {
+  background: whitesmoke;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: .9rem;
+  word-wrap: break-word;
+  line-height: 1.5;
+  border-left: 3px solid var(--primary-color, #0091EA);
+  border-radius: 4px;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+}
+
+kbd {
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
