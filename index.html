@@ -9,12 +9,7 @@
     html,
     body {
       margin: 0;
-      font-size: large;
       font-family: Roboto, sans-serif;
-      color: white;
-    }
-    
-    .tab-content {
       color: black;
     }
     /* Temp drawer background */
@@ -32,7 +27,7 @@
   <link rel="stylesheet" href="components/app-bar.css" type="text/css">
   <link rel="stylesheet" href="components/drawer.css" type="text/css">
   <link rel="stylesheet" href="components/forms.css" type="text/css">
-  <link rel="stylesheet" href="components/menus.css" type="text/css">
+  <link rel="stylesheet" href="components/menu.css" type="text/css">
 </head>
 
 <body>
@@ -40,7 +35,7 @@
     <div>
       <div class="drawer icon">
         <input type="checkbox" id="drawer">
-        <label for="drawer"><svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></label>
+        <label for="drawer"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></label>
         <div>
           <div>
             <div class="drawer-top MDBG">
@@ -62,9 +57,9 @@
     </div>
     <div>
       <div class="icon">
-        <form><label><input type="text" placeholder="Search" name="search"><svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.822 20.88l-6.353-6.354c.93-1.465 1.467-3.2 1.467-5.059.001-5.219-4.247-9.467-9.468-9.467s-9.468 4.248-9.468 9.468c0 5.221 4.247 9.469 9.468 9.469 1.768 0 3.421-.487 4.839-1.333l6.396 6.396 3.119-3.12zm-20.294-11.412c0-3.273 2.665-5.938 5.939-5.938 3.275 0 5.94 2.664 5.94 5.938 0 3.275-2.665 5.939-5.94 5.939-3.274 0-5.939-2.664-5.939-5.939z"/></svg></label></form>
+        <form><label><input type="text" placeholder="Search" name="search"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.822 20.88l-6.353-6.354c.93-1.465 1.467-3.2 1.467-5.059.001-5.219-4.247-9.467-9.468-9.467s-9.468 4.248-9.468 9.468c0 5.221 4.247 9.469 9.468 9.469 1.768 0 3.421-.487 4.839-1.333l6.396 6.396 3.119-3.12zm-20.294-11.412c0-3.273 2.665-5.938 5.939-5.938 3.275 0 5.94 2.664 5.94 5.938 0 3.275-2.665 5.939-5.94 5.939-3.274 0-5.939-2.664-5.939-5.939z"/></svg></label></form>
       </div>
-      <div class="menu icon">
+      <div class="menu left icon">
         <input type="checkbox" id="menu">
         <label for="menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/></svg>
@@ -72,6 +67,7 @@
         <div>
           <button>Menu Item 1</button>
           <button>Menu Item 2</button>
+          <hr>
           <button>Menu Item 3</button>
         </div>
       </div>
@@ -83,13 +79,15 @@
       <button>BUTTON</button>
       <button class="outlined-btn">OUTLINED BUTTON</button>
       <button class="text-btn">TEXT BUTTON</button>
+      <br>
       <button disabled>BUTTON</button>
       <button disabled class="outlined-btn">OUTLINED BUTTON</button>
       <button disabled class="text-btn">TEXT BUTTON</button>
       <br>
       <input type="text" placeholder="Text Input">
-      <input type="text" value="Text Input">
       <input type="password" value="Text Input">
+      <br>
+      <input type="text" value="Text Input">
       <br>
       <textarea>This is a text area.</textarea>
       <br>
@@ -97,13 +95,14 @@
       <input type="checkbox" id="checkbox2" checked><label for="checkbox2">Checkbox</label>
       <input type="checkbox" id="checkbox3" disabled><label for="checkbox3">Checkbox</label>
       <input type="checkbox" id="checkbox3" disabled checked><label for="checkbox3">Checkbox</label>
+      <br>
       <input type="radio" name="radio" id="radio1"><label for="radio1">Radio</label>
       <input type="radio" name="radio" id="radio2" checked><label for="radio2">Radio</label>
       <input type="radio" name="radio" id="radio3" disabled><label for="radio3">Radio</label>
       <input type="radio" id="radio3" checked disabled><label for="radio3">Radio</label>
       <div class="fab-btn"><button>+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button></div>
     </div>
-    <input type="radio" name="tab" id="tab2"><label for="tab2">Layout</label>
+    <input type="radio" name="tab" id="tab2"><label for="tab2">LAYOUT</label>
     <div class="tab-content">
       <div class="card" style="width: 500px;">
         <div class="title-box">
@@ -142,9 +141,44 @@
           </tr>
         </tbody>
       </table>
+      <br>
+      <details>
+        <summary><span>Expand</span></summary>
+        <div>
+          Content
+        </div>
+      </details>
+      <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+      </ul>
+      <ul>
+        <li>
+          <details>
+            <summary><span>First Item</span></summary>
+            <div>
+              First Item Content
+            </div>
+        </li>
+        <li>
+          <details>
+            <summary><span>Second Item</span></summary>
+            <div>
+              Second Item Content
+            </div>
+        </li>
+        <li>
+          <details>
+            <summary><span>Third Item</span></summary>
+            <div>
+              Third Item Content
+            </div>
+        </li>
+      </ul>
     </div>
     <input type="radio" name="tab" id="tab3"><label for="tab3">TAB 3</label>
-    <div class="tab-content">Tab 3 Content<input type="radio"></div>
+    <div class="tab-content">Tab 3 Content</div>
   </div>
 </body>
 

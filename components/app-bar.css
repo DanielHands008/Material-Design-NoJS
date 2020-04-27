@@ -5,36 +5,33 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 1px 1px 1px #0005;
+  color: white; /* add var color */
 }
 .app-bar>div {
   display: flex;
 }
 .app-bar .title {
-  font-size: larger;
+  font-size: 24px;
   margin: 10px;
+  font-weight: 500;
 }
 .app-bar .icon {
-  min-width: 24px;
-  height: 24px;
-  margin: 12px;
-  display: inline-block;
   fill: white;
-  cursor: pointer;
 }
 .app-bar .icon input {
   opacity: 0;
   width: 0px;
-  transition: width 100ms ease-in-out;
+  transition: width 100ms ease-in-out, opacity 0ms linear 100ms;
   margin-right: 8px;
 }
 .app-bar .icon input:focus {
   opacity: 1;
   width: 160px;
+  transition: width 100ms ease-in-out, opacity 0ms linear 0ms;
 }
 .app-bar .icon input+* {
   cursor: pointer;
 }
-.app-bar .icon .icon-svg {
-  width: 24px;
-  height: 24px;
+.app-bar .icon input::placeholder {
+  color: white; /* add var color */
 }

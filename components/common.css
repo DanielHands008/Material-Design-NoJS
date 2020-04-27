@@ -1,6 +1,14 @@
 hr {
   border: none;
   border-top: 1px solid lightgray;
+  width: 100%;
+}
+
+.icon {
+  min-width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin: 12px;
 }
 
 .thumbnail {
@@ -17,8 +25,9 @@ hr {
   -webkit-box-sizing: border-box;
   position: relative;
   background-color: white;
+  /* add var color */
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
-  border-radius: 4px;
+  border-radius: 2px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 52px;
@@ -51,6 +60,7 @@ hr {
   display: block;
   font-size: smaller;
   color: gray;
+  /* add var color */
 }
 
 .card .buttons {
@@ -64,22 +74,93 @@ table {
   border: 1px solid lightgray;
   overflow: hidden;
   border-collapse: collapse;
-  border-radius: 4px;
+  border-radius: 2px;
   width: 100px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
 }
 
-
 table tbody tr:hover {
   background-color: whitesmoke;
+  /* add var color */
 }
+
 table tbody tr {
   border-top: 1px solid lightgray;
 }
 
 table th,
 table td {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   padding-right: 16px;
   padding-left: 16px;
-  height: 42px;
+  height: 52px;
+}
+
+details {
+  background-color: white;
+  /* add var color */
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+  border-radius: 2px;
+}
+
+details summary {
+  position: relative;
+  padding-left: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+details summary+*{
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 24px;
+  top: 12px;
+  background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 50% 50% / 18px no-repeat;
+  transition: transform 100ms ease-in-out;
+}
+details[open] summary:after {
+  transform: rotate(-180deg);
+}
+details summary:focus {
+  outline: none;
+}
+
+/* Add expansion in lists? */
+ul {
+  list-style: none;
+  padding: 0px;
+}
+ul li {
+  padding: 16px;
+}
+ul li:not(:last-of-type) {
+  border-bottom: 1px solid lightgrey;
+}
+ul details {
+  margin: -16px;
+  box-shadow: none;
+}
+ul details summary {
+  padding: 16px;
+  font-weight: inherit;
+}
+ul details[open] summary {
+  color: var(--primary-color, #0091EA);
+}
+ul details summary+* {
+  padding: 16px;
+  padding-top: 0px;
 }
