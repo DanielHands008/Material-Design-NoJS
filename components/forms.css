@@ -15,9 +15,7 @@ textarea {
   font-size: large;
   border: none;
   border-bottom: 1px solid gray;
-  /* add var color */
-  color: black;
-  /* add var color */
+  color: var(--on-surface-color, black);;
   background-color: transparent;
   border-radius: 4px 4px 0px 0px;
   margin-bottom: 1px;
@@ -53,22 +51,29 @@ input[type="time"]:hover,
 input[type="url"]:hover,
 input[type="week"]:hover,
 textarea:hover {
-  background-color: whitesmoke;
-  /* add var color */
+  background-color: #0001;
 }
 
-.app-bar input:not([type="checkbox"]):not([type="radio"]) {
+.app-bar input[type="date"],
+.app-bar input[type="datetime-local"],
+.app-bar input[type="email"],
+.app-bar input[type="month"],
+.app-bar input[type="number"],
+.app-bar input[type="password"],
+.app-bar input[type="search"],
+.app-bar input[type="tel"],
+.app-bar input[type="text"],
+.app-bar input[type="time"],
+.app-bar input[type="url"],
+.app-bar input[type="week"] {
   border-bottom: 2px solid white;
-  /* add var color */
-  color: white;
-  /* add var color */
+  color: var(--on-primary-color, white);
   background-color: transparent;
 }
 
 input::placeholder {
   opacity: .6;
-  color: black;
-  /* add var color */
+  color: var(--on-surface-color, black);
 }
 
 button {
@@ -79,8 +84,7 @@ button {
   border: none;
   border-radius: 4px;
   font-weight: 600;
-  color: white;
-  /* add var color */
+  color: var(--on-primary-color, white);;
   background-color: var(--primary-color, #0091EA);
   background-position: center;
   transition: background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
@@ -149,58 +153,51 @@ button:not(:disabled):not(.outlined-btn):not(.text-btn):hover {
 }
 
 .fab-btn:hover button.small:nth-of-type(2) {
-  transition: transform 200ms ease-in-out 0ms;
+  transition: transform 200ms ease-in-out 0ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn:hover button.small:nth-of-type(3) {
-  transition: transform 200ms ease-in-out 50ms;
+  transition: transform 200ms ease-in-out 50ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn:hover button.small:nth-of-type(4) {
-  transition: transform 200ms ease-in-out 100ms;
+  transition: transform 200ms ease-in-out 100ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn:hover button.small:nth-of-type(5) {
-  transition: transform 200ms ease-in-out 150ms;
+  transition: transform 200ms ease-in-out 150ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn:hover button.small:nth-of-type(6) {
-  transition: transform 200ms ease-in-out 200ms;
+  transition: transform 200ms ease-in-out 200ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn:hover button.small:nth-of-type(7) {
-  transition: transform 200ms ease-in-out 250ms;
+  transition: transform 200ms ease-in-out 250ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button.small:nth-of-type(2) {
-  transition: transform 200ms ease-in-out 1250ms;
+  transition: transform 200ms ease-in-out 1250ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button.small:nth-of-type(3) {
-  transition: transform 200ms ease-in-out 1200ms;
+  transition: transform 200ms ease-in-out 1200ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button.small:nth-of-type(4) {
-  transition: transform 200ms ease-in-out 1150ms;
+  transition: transform 200ms ease-in-out 1150ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button.small:nth-of-type(5) {
-  transition: transform 200ms ease-in-out 1100ms;
+  transition: transform 200ms ease-in-out 1100ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button.small:nth-of-type(6) {
-  transition: transform 200ms ease-in-out 1050ms;
+  transition: transform 200ms ease-in-out 1050ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button.small:nth-of-type(7) {
-  transition: transform 200ms ease-in-out 1000ms;
-}
-
-
-/* BROKEN */
-
-.fab-btn button.small:hover {
-  transition: background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+  transition: transform 200ms ease-in-out 1000ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
 }
 
 .fab-btn button {
@@ -221,6 +218,8 @@ button:not(:disabled):not(.outlined-btn):not(.text-btn):hover {
   text-align: center;
   font-size: 24px;
   font-weight: 500;
+  color: var(--on-secondary-color, white);
+  background-color: var(--secondary-color, #03DAC6);
 }
 
 .fab-btn button.small {
@@ -230,10 +229,8 @@ button:not(:disabled):not(.outlined-btn):not(.text-btn):hover {
   min-height: 40px;
   margin-left: 8px;
   margin-bottom: 16px;
-  background-color: whitesmoke;
-  /* add var color */
-  color: black;
-  /* add var color */
+  background-color: var(--surface-color, white);
+  color: var(--on-surface-color, black);
 }
 
 
@@ -244,23 +241,36 @@ button:not(:disabled):hover {
 }
 
 button:not(:disabled).outlined-btn:hover,
-button:not(:disabled).text-btn:hover,
+button:not(:disabled).text-btn:hover {
+  background: #0001 radial-gradient(circle, transparent 1%, #0001 1%) center/15000%;
+}
+
+.fab-btn button:not(:disabled):hover {
+  background: var(--secondary-color, #03DAC6) radial-gradient(circle, transparent 1%, var(--secondary-color, #03DAC6) 1%) center/15000%;
+}
+
 .fab-btn button.small:not(:disabled):hover {
-  background: var(--primary-color, #0001) radial-gradient(circle, transparent 1%, var(--primary-color, #0001) 1%) center/15000%;
+  background: var(--surface-color, white) radial-gradient(circle, transparent 1%, var(--surface-color, white) 1%) center/15000%;
 }
 
 button:not(:disabled):active,
 button:not(:disabled).outlined-btn:active,
 button:not(:disabled).text-btn:active,
-.fab-btn button:not(:disabled):active {
-  background-color: #0000;
+.fab-btn button:not(:disabled):active,
+.fab-btn button.small:not(:disabled):active {
+  background-color: #aaaaaa;
   background-size: 100%;
   transition: background 0s;
+}
+button:not(:disabled):active,
+button:not(:disabled).outlined-btn:active,
+button:not(:disabled).text-btn:active{
+  background-color: transparent;
 }
 
 button:not(:disabled):active,
 .fab-btn button:not(:disabled):active {
-  background-color: #6eb9f7;
+  background-color: #ffffff;
 }
 
 button:focus,
@@ -315,30 +325,33 @@ input[type="radio"]+label {
 :not(.drawer):not(.menu)>input[type="checkbox"]:checked+label:before,
 :not(.tabs)>input[type="radio"]:checked+label:before {
   content: '\2714\00FE0E';
-  color: white;
+  color: var(--primary-on-color, white);
   background-color: var(--primary-color, #0091EA);
   border-color: var(--primary-color, #0091EA);
 }
 
 :not(.tabs)>input[type="radio"]:checked+label:before {
   content: '\2000';
-  background: radial-gradient(circle, #0091EA, #0091EA 42%, transparent 47%);
+  background: radial-gradient(circle, var(--primary-color, #0091EA), var(--primary-color, #0091EA) 42%, transparent 47%);
   border: 2px solid var(--primary-color, #0091EA);
 }
 
 :not(.drawer):not(.menu)>input[type="checkbox"]:disabled+label:before {
   border-color: #d3d3d380;
+  color: var(--primary-on-color, white);
   background-color: transparent;
 }
+
 :not(.drawer):not(.menu)>input[type="checkbox"]:checked:disabled+label:before {
   border-color: transparent;
   background-color: #d3d3d380;
 }
+
 :not(.tabs)>input[type="radio"]:disabled+label:before {
   border-color: #d3d3d380;
-  background-color: white;
+  background-color: transparent;
 }
 
 :not(.drawer):not(.menu)>input[type="radio"]:checked:disabled+label:before {
-  background: radial-gradient(circle, lightgray, lightgray 42%, transparent 47%);
+  background: radial-gradient(circle, #d3d3d380, #d3d3d380 42%, transparent 47%);
 }

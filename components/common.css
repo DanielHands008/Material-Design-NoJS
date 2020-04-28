@@ -24,8 +24,8 @@ hr {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   position: relative;
-  background-color: white;
-  /* add var color */
+  color: var(--on-surface-color, black);
+  background-color: var(--surface-color, white);
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 2px;
   padding-left: 16px;
@@ -54,13 +54,14 @@ hr {
   margin-top: 0px;
   vertical-align: top;
   height: 100%;
+  font-weight: 500;
 }
 
 .card-title>span {
   display: block;
   font-size: smaller;
-  color: gray;
-  /* add var color */
+  color: var(--on-surface-color, black);
+  opacity: .5;
 }
 
 .card .buttons {
@@ -71,6 +72,7 @@ hr {
 }
 
 table {
+  background-color: var(--surface-color, white);
   border: 1px solid lightgray;
   overflow: hidden;
   border-collapse: collapse;
@@ -80,8 +82,7 @@ table {
 }
 
 table tbody tr:hover {
-  background-color: whitesmoke;
-  /* add var color */
+  background-color: #0001;
 }
 
 table tbody tr {
@@ -99,7 +100,8 @@ table td {
 }
 
 details {
-  background-color: white;
+  color: var(--on-surface-color, black);
+  background-color: var(--surface-color, white);
   /* add var color */
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 2px;
@@ -114,14 +116,17 @@ details summary {
   font-weight: 500;
   cursor: pointer;
 }
-details summary+*{
+
+details summary+* {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 16px;
 }
+
 details summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
+
 details summary:after {
   content: '';
   position: absolute;
@@ -132,42 +137,52 @@ details summary:after {
   background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 50% 50% / 18px no-repeat;
   transition: transform 100ms ease-in-out;
 }
+
 details[open] summary:after {
   transform: rotate(-180deg);
 }
+
 details summary:focus {
   outline: none;
 }
 
-/* Add expansion in lists? */
 ul {
   list-style: none;
   padding: 0px;
 }
+
 ul li {
   padding: 16px;
 }
+
 ul li:not(:last-of-type) {
   border-bottom: 1px solid lightgrey;
 }
+
 ul details {
+  background-color: transparent;
   margin: -16px;
   box-shadow: none;
 }
+
 ul details summary {
   padding: 16px;
   font-weight: inherit;
 }
+
 ul details[open] summary {
   color: var(--primary-color, #0091EA);
 }
+
 ul details summary+* {
   padding: 16px;
   padding-top: 0px;
 }
 
 code {
-  background: whitesmoke;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+  color: var(--on-surface-color, black);
+  background: var(--surface-color, white);
   page-break-inside: avoid;
   font-family: monospace;
   font-size: .9rem;
@@ -181,7 +196,7 @@ code {
 }
 
 kbd {
-  border: solid 1px black;
+  border: solid 1px var(--on-surface-color, black);
   border-radius: 4px;
   padding: 2px 4px;
 }

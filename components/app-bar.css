@@ -5,33 +5,41 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 1px 1px 1px #0005;
-  color: white; /* add var color */
+  color: var(--on-primary-color, white);
 }
+
 .app-bar>div {
   display: flex;
 }
+
 .app-bar .title {
   font-size: 24px;
   margin: 10px;
   font-weight: 500;
 }
+
 .app-bar .icon {
-  fill: white;
+  fill: var(--on-primary-color, white);
 }
+
 .app-bar .icon input {
   opacity: 0;
   width: 0px;
   transition: width 100ms ease-in-out, opacity 0ms linear 100ms;
   margin-right: 8px;
 }
+
 .app-bar .icon input:focus {
   opacity: 1;
   width: 160px;
   transition: width 100ms ease-in-out, opacity 0ms linear 0ms;
 }
+
 .app-bar .icon input+* {
   cursor: pointer;
 }
-.app-bar .icon input::placeholder {
-  color: white; /* add var color */
+
+.app-bar input::placeholder {
+  opacity: .6;
+  color: var(--on-primary-color, white);
 }
