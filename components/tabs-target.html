@@ -13,18 +13,22 @@
   </style>
   <link href="../fonts/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="common.css" type="text/css">
-  <link rel="stylesheet" href="tabs.css" type="text/css">
+  <link rel="stylesheet" href="tabs-target.css" type="text/css">
 </head>
 
 <body>
   <div class="tabs">
-    <input type="radio" name="tab" id="tab1" checked><label for="tab1"><span>TAB 1</span></label>
+    <span id="tab1"></span>
+    <a href="#tab1">TAB 1</a>
     <div>Tab 1 Content</div>
-    <input type="radio" name="tab" id="tab2"><label for="tab2"><span>TAB 2</span></label>
+    <span id="tab2"></span>
+    <a href="#tab2">TAB 2</a>
     <div>Tab 2 Content</div>
-    <input type="radio" name="tab" id="tab3"><label for="tab3"><span>TAB 3</span></label>
+    <span id="tab3"></span>
+    <a href="#tab3">TAB 3</a>
     <div>Tab 3 Content</div>
   </div>
+  <p style="margin: 8px;margin-top: 32px">Note: When there is not a valid hash in the URL no tab will be displayed. </p>
 </body>
 
 </html>

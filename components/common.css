@@ -1,3 +1,25 @@
+:root {
+  --primary-color: #2196f3;
+  --primary-variant-color: #1769aa;
+  --secondary-color: #f50057;
+  --secondary-variant-color: #ab003c;
+  --background-color: #fff;
+  --surface-color: #fff;
+  --error-color: #B00020;
+  --on-primary-color: white;
+  --on-secondary-color: #fff;
+  --on-background-color: #000000;
+  --on-surface-color: #000;
+  --on-error-color: #FFFFFF;
+}
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: var(--on-background-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
 hr {
   border: none;
   border-top: 1px solid lightgray;
@@ -9,6 +31,25 @@ hr {
   height: 24px;
   display: inline-block;
   margin: 12px;
+}
+
+.icon-ripple {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-ripple:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border-radius: 100%;
+  z-index: -1;
+  transform: translate(-18px, -26px);
 }
 
 .thumbnail {
@@ -24,8 +65,8 @@ hr {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   position: relative;
-  color: var(--on-surface-color, black);
-  background-color: var(--surface-color, white);
+  color: var(--on-surface-color);
+  background-color: var(--surface-color);
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 2px;
   padding-left: 16px;
@@ -55,12 +96,13 @@ hr {
   vertical-align: top;
   height: 100%;
   font-weight: 500;
+  margin-top: 4px;
 }
 
 .card-title>span {
   display: block;
   font-size: smaller;
-  color: var(--on-surface-color, black);
+  color: var(--on-surface-color);
   opacity: .5;
 }
 
@@ -72,7 +114,7 @@ hr {
 }
 
 table {
-  background-color: var(--surface-color, white);
+  background-color: var(--surface-color);
   border: 1px solid lightgray;
   overflow: hidden;
   border-collapse: collapse;
@@ -100,8 +142,8 @@ table td {
 }
 
 details {
-  color: var(--on-surface-color, black);
-  background-color: var(--surface-color, white);
+  color: var(--on-surface-color);
+  background-color: var(--surface-color);
   /* add var color */
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 2px;
@@ -171,7 +213,7 @@ ul details summary {
 }
 
 ul details[open] summary {
-  color: var(--primary-color, #0091EA);
+  color: var(--primary-color);
 }
 
 ul details summary+* {
@@ -181,14 +223,14 @@ ul details summary+* {
 
 code {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
-  color: var(--on-surface-color, black);
-  background: var(--surface-color, white);
+  color: var(--on-surface-color);
+  background: var(--surface-color);
   page-break-inside: avoid;
   font-family: monospace;
   font-size: .9rem;
   word-wrap: break-word;
   line-height: 1.5;
-  border-left: 3px solid var(--primary-color, #0091EA);
+  border-left: 3px solid var(--primary-color);
   border-radius: 4px;
   overflow: auto;
   padding: 1em 1.5em;
@@ -196,7 +238,47 @@ code {
 }
 
 kbd {
-  border: solid 1px var(--on-surface-color, black);
+  border: solid 1px var(--on-surface-color);
   border-radius: 4px;
   padding: 2px 4px;
+}
+
+[tooltip] {
+  position: relative;
+}
+
+[tooltip]:after, [tooltip-left]:after, [tooltip-right]:after  {
+  position: absolute;
+  color: #FFF;
+  background-color: #232F34BB;
+  border-radius: 4px;
+  padding: 8px;
+  white-space: nowrap;
+  display: none;
+}
+[tooltip]:after {
+  content: attr(tooltip);
+  right: initial;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 8px);
+}
+[tooltip-left]:after {
+  content: attr(tooltip-left);
+  left: initial;
+  right: calc(100%);
+  top: 50%;
+  transform: translate(-8px, -50%);
+}
+
+[tooltip-right].right:after {
+  content: attr(tooltip-right);
+  left: calc(100%);
+  right: initial;
+  top: 50%;
+  transform: translate(8px, -50%);
+}
+[tooltip]:hover:after, [tooltip-left]:hover:after, [tooltip-right]:hover:after {
+  display: block;
+  position:absolute;
 }

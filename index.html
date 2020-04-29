@@ -5,34 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title>Material Design NoJS</title>
-  <style>
-    html,
-    body {
-      margin: 0;
-      font-family: Roboto, sans-serif;
-      color: black;
-    }
-    
-    .MDBG {
-      background-color: var(--primary-color);
-    }
-    :root {
-      --primary-color: #6200EE;
-      --primary-variant-color: #3700B3;
-      --secondary-color: #03DAC6;
-      --secondary-variant-color: #018786;
 
-      --background-color: #FFFFFF;
-      --surface-color: #fff;
-      --error-color: #B00020;
-
-      --on-primary-color: white;
-      --on-secondary-color: #fff;
-      --on-background-color: #000000;
-      --on-surface-color: #000;
-      --on-error-color: #FFFFFF;
-    }
-  </style>
   <link href="fonts/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="components/common.css" type="text/css">
   <link rel="stylesheet" href="components/forms.css" type="text/css">
@@ -40,8 +13,7 @@
   <link rel="stylesheet" href="components/tabs.css" type="text/css">
   <link rel="stylesheet" href="components/drawer.css" type="text/css">
   <link rel="stylesheet" href="components/menu.css" type="text/css">
-  
-  
+
 </head>
 
 <body>
@@ -49,7 +21,7 @@
     <div>
       <div class="drawer icon">
         <input type="checkbox" id="drawer">
-        <label for="drawer"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></label>
+        <label for="drawer"><span class="icon-ripple"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></span></label>
         <div>
           <div>
             <div class="drawer-top">
@@ -71,12 +43,12 @@
     </div>
     <div>
       <div class="icon">
-        <form><label><input type="text" placeholder="Search" name="search"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.822 20.88l-6.353-6.354c.93-1.465 1.467-3.2 1.467-5.059.001-5.219-4.247-9.467-9.468-9.467s-9.468 4.248-9.468 9.468c0 5.221 4.247 9.469 9.468 9.469 1.768 0 3.421-.487 4.839-1.333l6.396 6.396 3.119-3.12zm-20.294-11.412c0-3.273 2.665-5.938 5.939-5.938 3.275 0 5.94 2.664 5.94 5.938 0 3.275-2.665 5.939-5.94 5.939-3.274 0-5.939-2.664-5.939-5.939z"/></svg></label></form>
+        <form><label><input type="text" placeholder="Search" name="search"><span tooltip="Search" class="icon-ripple"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.822 20.88l-6.353-6.354c.93-1.465 1.467-3.2 1.467-5.059.001-5.219-4.247-9.467-9.468-9.467s-9.468 4.248-9.468 9.468c0 5.221 4.247 9.469 9.468 9.469 1.768 0 3.421-.487 4.839-1.333l6.396 6.396 3.119-3.12zm-20.294-11.412c0-3.273 2.665-5.938 5.939-5.938 3.275 0 5.94 2.664 5.94 5.938 0 3.275-2.665 5.939-5.94 5.939-3.274 0-5.939-2.664-5.939-5.939z"/></svg></span></label></form>
       </div>
       <div class="menu left icon">
         <input type="checkbox" id="menu">
         <label for="menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/></svg>
+          <span class="icon-ripple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/></svg></span>
         </label>
         <div>
           <button>Menu Item 1</button>
@@ -88,16 +60,21 @@
     </div>
   </div>
   <div class="tabs">
-    <input type="radio" name="tab" id="tab1" checked><label for="tab1">FORMS</label>
+    <input type="radio" name="tab" id="tab1" checked><label for="tab1"><span>Forms</span></label>
     <div class="tab-content">
-      <button>BUTTON</button>
-      <button class="outlined-btn">OUTLINED BUTTON</button>
-      <button class="text-btn">TEXT BUTTON</button>
+      <button>Button</button>
+      <button class="outlined-btn">Outlined Button</button>
+      <button class="text-btn">Text Button</button>
       <br>
       <br>
-      <button disabled>BUTTON</button>
-      <button disabled class="outlined-btn">OUTLINED BUTTON</button>
-      <button disabled class="text-btn">TEXT BUTTON</button>
+      <button style="--button-color: var(--secondary-color)">Button</button>
+      <button style="--button-color: var(--surface-color); --button-text-color: var(--on-surface-color)">Button</button>
+      <button class="outlined-btn" style="--button-color: var(--secondary-color)">Outlined Button</button>
+      <br>
+      <br>
+      <button disabled>Button</button>
+      <button disabled class="outlined-btn">Outlined Button</button>
+      <button disabled class="text-btn">Text Button</button>
       <br>
       <br>
       <input type="text" placeholder="Text Input">
@@ -111,17 +88,19 @@
       <br>
       <input type="checkbox" id="checkbox1"><label for="checkbox1">Checkbox</label>
       <input type="checkbox" id="checkbox2" checked><label for="checkbox2">Checkbox</label>
-      <input type="checkbox" id="checkbox3" disabled><label for="checkbox3">Checkbox</label>
-      <input type="checkbox" id="checkbox3" disabled checked><label for="checkbox3">Checkbox</label>
+      <input type="checkbox" id="checkbox3" checked><label for="checkbox3" style="--checkbox-radio-color: var(--primary-color)">Checkbox</label>
+      <input type="checkbox" id="checkbox4" disabled><label for="checkbox4">Checkbox</label>
+      <input type="checkbox" id="checkbox5" disabled checked><label for="checkbox5">Checkbox</label>
       <br>
       <br>
       <input type="radio" name="radio" id="radio1"><label for="radio1">Radio</label>
       <input type="radio" name="radio" id="radio2" checked><label for="radio2">Radio</label>
-      <input type="radio" name="radio" id="radio3" disabled><label for="radio3">Radio</label>
+      <input type="radio" name="radio" id="radio3" checked><label for="radio3" style="--checkbox-radio-color: var(--primary-color)">Radio</label>
+      <input type="radio" name="radio" id="radio4" disabled><label for="radio4">Radio</label>
       <input type="radio" id="radio3" checked disabled><label for="radio3">Radio</label>
       <div class="fab-btn"><button>+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button><button class="small">+</button></div>
     </div>
-    <input type="radio" name="tab" id="tab2"><label for="tab2">LAYOUT</label>
+    <input type="radio" name="tab" id="tab2"><label for="tab2"><span>Layout</span></label>
     <div class="tab-content">
       <div class="card" style="width: 500px;">
         <div class="title-box">
@@ -196,16 +175,16 @@
         </li>
       </ul>
     </div>
-    <input type="radio" name="tab" id="tab3"><label for="tab3">OTHER</label>
+    <input type="radio" name="tab" id="tab3"><label for="tab3"><span>Other</span></label>
     <div class="tab-content">
       <pre><code>#header h1 a {
       display: block;
       width: 300px;
       height: 80px;
     }</code></pre>
-    <br>
-    <samp>Sample output from a computer program</samp>
-    <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+      <br>
+      <samp>Sample output from a computer program</samp>
+      <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
     </div>
   </div>
 </body>

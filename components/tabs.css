@@ -1,10 +1,18 @@
 .tabs {
   margin: 0;
   padding-top: 0;
-  background-color: var(--primary-color, #0091EA);
-  height: 36px;
+  background-color: var(--primary-color);
+  height: 48px;
   width: 100%;
   box-shadow: 1px 1px 1px #0005;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .tabs>label:first-of-type {
@@ -14,17 +22,26 @@
 .tabs>label {
   margin: 0;
   position: relative;
-  height: 36px;
+  height: 48px;
   display: inline-block;
   cursor: pointer;
-  color: var(--on-primary-color, white);
-}
-
-.tabs>label {
+  text-align: center;
+  color: var(--on-primary-color);
+  padding-left: 32px;
+  padding-right: 32px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 9px;
+  padding-top: 13px;
+  background-position: center;
+}
+
+.tabs>label span {
+  font-weight: 500;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
 }
 
 .tabs>div {
@@ -32,23 +49,42 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  white-space: normal;
 }
 
 .tabs>input[type="radio"]:checked+label {
-  border-bottom: 2px solid var(--on-primary-color, white);
+  border-bottom: 2px solid var(--on-primary-color);
 }
 
-.tabs>div {
+.tabs>.tab-content {
   margin: 0;
   width: calc(100vw - (100vw - 100%));
   position: absolute;
 }
 
 .tabs>input[type="radio"],
-.tabs>input[type="radio"]+label+div {
+.tabs>input[type="radio"]+label+.tab-content {
   display: none;
 }
 
-.tabs>input[type="radio"]:checked+label+div {
+.tabs>input[type="radio"]:checked+label+.tab-content {
   display: block;
+}
+
+/* Ripple Effect */
+
+.tabs>label {
+  transition: background 0.8s;
+  background: var(--button-color) radial-gradient(circle, transparent 1%, var(--button-color) 1%) center/15000%;
+}
+
+.tabs>label:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-position: center;
+}
+
+.tabs>label:active {
+  background-color: #ffffff55;
+  background-position: center;
 }
