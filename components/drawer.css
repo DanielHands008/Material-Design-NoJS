@@ -81,7 +81,7 @@
 .email {
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--on-primary-color);
   margin: 0.625rem;
   bottom: 0;

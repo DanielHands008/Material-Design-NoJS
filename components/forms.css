@@ -99,6 +99,21 @@ select:focus {
   color: var(--on-primary-color);
   background-color: transparent;
 }
+input[type="date"]:invalid,
+input[type="datetime-local"]:invalid,
+input[type="email"]:invalid,
+input[type="month"]:invalid,
+input[type="number"]:invalid,
+input[type="password"]:invalid,
+input[type="search"]:invalid,
+input[type="tel"]:invalid,
+input[type="text"]:invalid,
+input[type="time"]:invalid,
+input[type="url"]:invalid,
+input[type="week"]:invalid {
+  margin-bottom: 0px;
+  border-bottom: 2px solid var(--error-color);
+}
 
 select {
   padding-right: 3rem;
@@ -127,7 +142,7 @@ button:not(.bottom-btn) {
   padding-right: 1rem;
   border: none;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.75;
   letter-spacing: 0.02857em;
   font-size: 0.875rem;
@@ -371,7 +386,7 @@ input[type="radio"]+label {
   padding-left: 0.1875rem;
   padding-right: 0.1875rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2rem;
   transition: background 100ms ease-in-out, border 100ms ease-in-out;
 }
