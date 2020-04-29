@@ -1,0 +1,64 @@
+.tabs .tab-content{
+  padding-bottom: 3.5625rem;
+}
+.bottom-navigation {
+  position: fixed;
+  bottom: 0px;
+  width: calc(100vw - (100vw - 100%));
+  height: 3.5625rem;
+  background-color: var(--surface-color);
+  display: flex;
+  align-items: stretch;
+  justify-content: center
+}
+.bottom-navigation>button {
+  all: initial;
+  font-family: Roboto, sans-serif;
+  height: 3.5625rem;
+  align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.54);
+  fill: rgba(0, 0, 0, 0.54);
+  box-shadow: none !important;
+}
+.bottom-navigation>button>p,
+.bottom-navigation>button>div {
+  padding: 0;
+  margin: 0;
+}
+.bottom-navigation>button:focus,
+.bottom-navigation>button.active {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+.bottom-navigation>button>* {
+  transition: color 200ms linear, fill 200ms linear, transform 200ms linear;
+}
+.bottom-navigation>button:focus>*,
+.bottom-navigation>button.active>* {
+  transform: scale(1.1);
+}
+
+
+
+/* Ripple Effect */
+
+.bottom-navigation>button {
+  transition: background 0.8s;
+  background: var(--surface-color) radial-gradient(circle, transparent 1%, var(--surface-color) 1%) center/15000%;
+}
+
+.bottom-navigation>button:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-position: center;
+}
+
+.bottom-navigation>button:active {
+  background-color: var(--primary-color);
+  background-position: center;
+}

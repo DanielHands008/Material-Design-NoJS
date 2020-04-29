@@ -16,7 +16,8 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-textarea {
+textarea,
+select {
   padding: .5rem 0px .5rem;
   font-size: 1rem;
   border: none;
@@ -25,7 +26,12 @@ textarea {
   background-color: transparent;
   border-radius: 4px 4px 0px 0px;
   margin-bottom: 1px;
+  appearance: none;
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -webkit-appearance: none;
 }
+
 input[type="date"],
 input[type="datetime-local"],
 input[type="email"],
@@ -53,7 +59,8 @@ input[type="text"]:hover,
 input[type="time"]:hover,
 input[type="url"]:hover,
 input[type="week"]:hover,
-textarea:hover {
+textarea:hover,
+select:hover {
   margin-bottom: 0px;
   border-bottom: 2px solid var(--on-surface-color);
 }
@@ -70,7 +77,8 @@ input[type="text"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   margin-bottom: 0px;
   border-bottom: 2px solid var(--primary-color);
 }
@@ -92,12 +100,27 @@ textarea:focus {
   background-color: transparent;
 }
 
+select {
+  padding-right: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+select[multiple] {
+  padding-right: 2rem;
+}
+select:not([multiple]) {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="grey" transform="rotate(90 0 0)" width="24" height="24" viewBox="0 0 24 24"><path d="M6 0l12 12-12 12z"/></svg>') calc(100% - .5rem) 50% / 0.7rem no-repeat;
+}
+select:focus {
+  background-color: #0001;
+}
+
 input::placeholder {
   opacity: .6;
   color: var(--on-surface-color);
 }
 
-button {
+button:not(.bottom-btn) {
   min-width: 4rem;
   height: 2.3rem;
   padding-left: 1rem;
@@ -145,7 +168,7 @@ button.outlined-btn:disabled {
   border: 1px solid rgba(128, 128, 128, .14);
 }
 
-button:enabled:hover {
+button:not(.bottom-btn):enabled:hover {
   cursor: pointer;
   filter: brightness(90%);
 }
@@ -272,7 +295,7 @@ textarea {
 
 /* Ripple Effect */
 
-button:enabled:hover {
+button:not(.bottom-btn):enabled:hover {
   background: var(--button-color) radial-gradient(circle, transparent 1%, var(--button-color) 1%) center/15000%;
 }
 
@@ -289,7 +312,7 @@ button:enabled.text-btn:hover {
   background: var(--surface-color) radial-gradient(circle, transparent 1%, var(--surface-color) 1%) center/15000%;
 }
 
-button:enabled:active,
+button:not(.bottom-btn):enabled:active,
 button:enabled.outlined-btn:active,
 button:enabled.text-btn:active,
 .fab-btn button:enabled:active,
@@ -299,13 +322,13 @@ button:enabled.text-btn:active,
   transition: background 0s;
 }
 
-button:enabled:active,
+button:not(.bottom-btn):enabled:active,
 button:enabled.outlined-btn:active,
 button:enabled.text-btn:active {
   background-color: transparent;
 }
 
-button:enabled:active,
+button:not(.bottom-btn):enabled:active,
 .fab-btn button:enabled:active {
   background-color: #ffffff;
 }

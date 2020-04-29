@@ -1,11 +1,17 @@
 .app-bar {
+  --app-bar-color: var(--primary-color);
+  --app-bar-text-color: var(--on-primary-color);
   width: 100%;
   height: 3.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--app-bar-color);
   display: flex;
   justify-content: space-between;
   box-shadow: 1px 1px 1px #0005;
-  color: var(--on-primary-color);
+  color: var(--app-bar-text-color);
+}
+.app-bar.surface-color {
+  --app-bar-color: var(--surface-color);
+  --app-bar-text-color: var(--on-surface-color);
 }
 
 .app-bar>div {
@@ -23,7 +29,7 @@
 }
 
 .app-bar .icon {
-  fill: var(--on-primary-color);
+  fill: var(--app-bar-text-color);
 }
 
 .app-bar .icon input {
@@ -45,5 +51,5 @@
 
 .app-bar input::placeholder {
   opacity: .6;
-  color: var(--on-primary-color);
+  color: var(--app-bar-text-color);
 }

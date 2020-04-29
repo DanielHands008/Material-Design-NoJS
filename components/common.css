@@ -53,6 +53,7 @@ hr {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 3.25rem;
+  max-width: calc((100vw - (100vw - 100%)) - 16px);
 }
 
 .card .title-box {

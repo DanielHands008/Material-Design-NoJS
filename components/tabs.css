@@ -1,7 +1,11 @@
 .tabs {
+  --tabs-color: var(--primary-color);
+  --tabs-text-color: var(--on-primary-color);
+  --tabs--active-text-color: var(--on-primary-color);
+  --tabs--active-underline-color: var(--secondary-color);
   margin: 0;
   padding-top: 0;
-  background-color: var(--primary-color);
+  background-color: var(--tabs-color);
   height: 3rem;
   width: 100%;
   box-shadow: 1px 1px 1px #0005;
@@ -9,6 +13,13 @@
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.tabs.surface-color {
+  --tabs-color: var(--surface-color);
+  --tabs-text-color: var(--on-surface-color);
+  --tabs--active-text-color: var(--primary-color);
+  --tabs--active-underline-color: var(--primary-color);
 }
 
 .tabs::-webkit-scrollbar {
@@ -26,7 +37,7 @@
   display: inline-block;
   cursor: pointer;
   text-align: center;
-  color: var(--on-primary-color);
+  color: var(--tabs-text-color);
   padding-left: 32px;
   padding-right: 32px;
   -webkit-box-sizing: border-box;
@@ -53,7 +64,8 @@
 }
 
 .tabs>input[type="radio"]:checked+label {
-  border-bottom: 0.125rem solid var(--secondary-color);
+  color: var(--tabs--active-text-color);
+  border-bottom: 0.125rem solid var(--tabs--active-underline-color);
 }
 
 .tabs>.tab-content {
@@ -71,11 +83,12 @@
   display: block;
 }
 
+
 /* Ripple Effect */
 
 .tabs>label {
   transition: background 0.8s;
-  background: var(--button-color) radial-gradient(circle, transparent 1%, var(--button-color) 1%) center/15000%;
+  background: var(--tabs-color) radial-gradient(circle, transparent 1%, var(--tabs-color) 1%) center/15000%;
 }
 
 .tabs>label:active {
@@ -85,6 +98,6 @@
 }
 
 .tabs>label:active {
-  background-color: #ffffff55;
+  background-color: var(--tabs--active-text-color);
   background-position: center;
 }
