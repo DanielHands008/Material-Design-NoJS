@@ -27,34 +27,15 @@ hr {
 }
 
 .icon {
-  min-width: 24px;
-  height: 24px;
+  min-width: 1.5rem;
+  height: 1.5rem;
   display: inline-block;
-  margin: 12px;
-}
-
-.icon-ripple {
-  position: relative;
-  z-index: 1;
-}
-
-.icon-ripple:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  border-radius: 100%;
-  z-index: -1;
-  transform: translate(-18px, -26px);
+  margin: 0.75rem;
 }
 
 .thumbnail {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 100%;
   overflow: hidden;
   display: inline-block;
@@ -69,9 +50,9 @@ hr {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 2px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 52px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3.25rem;
 }
 
 .card .title-box {
@@ -79,24 +60,24 @@ hr {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   width: 100%;
-  padding-top: 16px;
+  padding-top: 1rem;
   padding-bottom: 0px;
 }
 
 .card .title-box+* {
-  margin-top: 11px;
+  margin-top: 0.6875rem;
   margin-bottom: 0px;
 }
 
 .card-title {
   display: inline-block;
-  margin-left: 16px;
+  margin-left: 1rem;
   vertical-align: super;
   margin-top: 0px;
   vertical-align: top;
   height: 100%;
   font-weight: 500;
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 
 .card-title>span {
@@ -109,8 +90,8 @@ hr {
 .card .buttons {
   position: absolute;
   bottom: 0px;
-  width: 100%;
-  padding: 8px;
+  width: calc(100% - 1rem);
+  padding: .5rem;
 }
 
 table {
@@ -119,7 +100,6 @@ table {
   overflow: hidden;
   border-collapse: collapse;
   border-radius: 2px;
-  width: 100px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
 }
 
@@ -136,9 +116,9 @@ table td {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding-right: 16px;
-  padding-left: 16px;
-  height: 52px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 3.25rem;
 }
 
 details {
@@ -146,23 +126,41 @@ details {
   background-color: var(--surface-color);
   /* add var color */
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 details summary {
   list-style: none;
   position: relative;
-  padding-left: 24px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-weight: 500;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
   cursor: pointer;
 }
 
 details summary+* {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+}
+.details-group details {
+  border-radius: 0px;
+}
+.details-group details:first-of-type {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.details-group details:last-of-type {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.details-group details[open]:not(:first-of-type) {
+  margin-top: 1rem; 
+}
+.details-group details[open]:not(:last-of-type) {
+  margin-bottom: 1rem;
 }
 
 details summary::-webkit-details-marker {
@@ -172,11 +170,11 @@ details summary::-webkit-details-marker {
 details summary:after {
   content: '';
   position: absolute;
-  width: 24px;
-  height: 24px;
-  right: 24px;
-  top: 12px;
-  background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 50% 50% / 18px no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 1.5rem;
+  top: .75rem;
+  background: transparent url('data:image/svg+xml,<svg fill="grey" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>') 50% 50% / 18px no-repeat;
   transition: transform 100ms ease-in-out;
 }
 
@@ -194,7 +192,7 @@ ul {
 }
 
 ul li {
-  padding: 16px;
+  padding: 1rem;
 }
 
 ul li:not(:last-of-type) {
@@ -203,12 +201,12 @@ ul li:not(:last-of-type) {
 
 ul details {
   background-color: transparent;
-  margin: -16px;
+  margin: -1rem;
   box-shadow: none;
 }
 
 ul details summary {
-  padding: 16px;
+  padding: 1rem;
   font-weight: inherit;
 }
 
@@ -217,7 +215,7 @@ ul details[open] summary {
 }
 
 ul details summary+* {
-  padding: 16px;
+  padding: 1rem;
   padding-top: 0px;
 }
 
@@ -233,14 +231,19 @@ code {
   border-left: 3px solid var(--primary-color);
   border-radius: 4px;
   overflow: auto;
-  padding: 1em 1.5em;
+  padding: 1rem 1.5rem;
   display: block;
+}
+
+samp {
+  font-size: .9rem;
 }
 
 kbd {
   border: solid 1px var(--on-surface-color);
   border-radius: 4px;
-  padding: 2px 4px;
+  padding: 0.125rem 0.25rem;
+  font-size: .9rem;
 }
 
 [tooltip] {
@@ -251,24 +254,25 @@ kbd {
   position: absolute;
   color: #FFF;
   background-color: #232F34BB;
-  border-radius: 4px;
-  padding: 8px;
+  border-radius: 0.25rem;
+  padding: .5rem;
   white-space: nowrap;
   display: none;
+  font-size: .8rem;
 }
 [tooltip]:after {
   content: attr(tooltip);
   right: initial;
   left: 50%;
   top: 100%;
-  transform: translate(-50%, 8px);
+  transform: translate(-50%, .5rem);
 }
 [tooltip-left]:after {
   content: attr(tooltip-left);
   left: initial;
   right: calc(100%);
   top: 50%;
-  transform: translate(-8px, -50%);
+  transform: translate(-0.5rem, -50%);
 }
 
 [tooltip-right].right:after {
@@ -276,7 +280,7 @@ kbd {
   left: calc(100%);
   right: initial;
   top: 50%;
-  transform: translate(8px, -50%);
+  transform: translate(.5rem, -50%);
 }
 [tooltip]:hover:after, [tooltip-left]:hover:after, [tooltip-right]:hover:after {
   display: block;
