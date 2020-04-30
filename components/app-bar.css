@@ -6,7 +6,6 @@
   background-color: var(--app-bar-color);
   display: flex;
   justify-content: space-between;
-  box-shadow: 1px 1px 1px #0005;
   color: var(--app-bar-text-color);
 }
 .app-bar.surface-color {

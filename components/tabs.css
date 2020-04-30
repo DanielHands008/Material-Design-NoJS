@@ -8,7 +8,6 @@
   background-color: var(--tabs-color);
   height: 3rem;
   width: 100%;
-  box-shadow: 1px 1px 1px #0005;
   white-space: nowrap;
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -56,6 +55,7 @@
 
 .tabs>div {
   padding: 8px;
+  padding-top: 16px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

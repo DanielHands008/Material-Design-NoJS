@@ -12,12 +12,62 @@
   --on-surface-color: #000;
   --on-error-color: #FFFFFF;
 }
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   color: var(--on-background-color);
   background-color: var(--background-color);
   overflow-x: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+
+h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+
+h4 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
 }
 
 hr {
@@ -48,12 +98,12 @@ hr {
   position: relative;
   color: var(--on-surface-color);
   background-color: var(--surface-color);
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 2px;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 3.25rem;
   max-width: calc((100vw - (100vw - 100%)) - 16px);
+  border: 1px solid #0001
 }
 
 .card .title-box {
@@ -101,7 +151,6 @@ table {
   overflow: hidden;
   border-collapse: collapse;
   border-radius: 2px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
 }
 
 table tbody tr:hover {
@@ -125,8 +174,6 @@ table td {
 details {
   color: var(--on-surface-color);
   background-color: var(--surface-color);
-  /* add var color */
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   border-radius: 4px;
 }
 
@@ -146,20 +193,25 @@ details summary+* {
   padding-right: 1.5rem;
   padding-bottom: 1rem;
 }
+
 .details-group details {
   border-radius: 0px;
 }
+
 .details-group details:first-of-type {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
+
 .details-group details:last-of-type {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
+
 .details-group details[open]:not(:first-of-type) {
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
+
 .details-group details[open]:not(:last-of-type) {
   margin-bottom: 1rem;
 }
@@ -221,7 +273,6 @@ ul details summary+* {
 }
 
 code {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
   color: var(--on-surface-color);
   background: var(--surface-color);
   page-break-inside: avoid;
@@ -251,7 +302,9 @@ kbd {
   position: relative;
 }
 
-[tooltip]:after, [tooltip-left]:after, [tooltip-right]:after  {
+[tooltip]:after,
+[tooltip-left]:after,
+[tooltip-right]:after {
   position: absolute;
   color: #FFF;
   background-color: #232F34BB;
@@ -261,6 +314,7 @@ kbd {
   display: none;
   font-size: .8rem;
 }
+
 [tooltip]:after {
   content: attr(tooltip);
   right: initial;
@@ -268,6 +322,7 @@ kbd {
   top: 100%;
   transform: translate(-50%, .5rem);
 }
+
 [tooltip-left]:after {
   content: attr(tooltip-left);
   left: initial;
@@ -283,7 +338,30 @@ kbd {
   top: 50%;
   transform: translate(.5rem, -50%);
 }
-[tooltip]:hover:after, [tooltip-left]:hover:after, [tooltip-right]:hover:after {
+
+[tooltip]:hover:after,
+[tooltip-left]:hover:after,
+[tooltip-right]:hover:after {
   display: block;
-  position:absolute;
+  position: absolute;
+}
+
+[elevation="0"],
+.elevation0 {
+  box-shadow: none;
+}
+
+[elevation="1"],
+.elevation1 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
+}
+
+[elevation="2"],
+.elevation2 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 6px, rgba(0, 0, 0, 0.2) 0px 3px 3px;
+}
+
+[elevation="3"],
+.elevation3 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px, rgba(0, 0, 0, 0.2) 0px 5px 5px;
 }
