@@ -1,15 +1,6 @@
-.drawer>input[type="checkbox"] {
-  display: none;
-}
-
-.drawer input,
-.drawer label:before {
-  content: none;
-  all: initial;
-}
-
-.drawer>input[type="checkbox"]+label {
-  cursor: pointer;
+.drawer>input[type="checkbox"],
+.drawer>input[type="checkbox"]+label:before {
+  all: unset;
 }
 
 .drawer>input[type="checkbox"]+label+div {
@@ -45,9 +36,9 @@
   z-index: 999;
 }
 
-.drawer>input[type="checkbox"]+label+div button:not(:disabled),
-.drawer>input[type="checkbox"]+label+div button:active {
-  all: initial;
+.drawer button:disabled,
+.drawer button:enabled {
+  all: unset;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -64,9 +55,15 @@
   font-size: large;
   text-align: left;
   cursor: pointer;
+  box-shadow: none !important;
 }
 
-.drawer>input[type="checkbox"]+label+div button:not(:disabled):hover {
+.drawer button:disabled {
+  color: rgba(128, 128, 128, .5);
+  background-color: transparent !important;
+}
+
+.drawer button:not(:disabled):hover {
   box-shadow: none;
   background-color: #0001;
 }

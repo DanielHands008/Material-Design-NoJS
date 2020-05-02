@@ -21,6 +21,11 @@
   --tabs--active-underline-color: var(--primary-color);
 }
 
+.tabs>input[type="radio"],
+.tabs>input[type="radio"]+label:before {
+  all: initial !important;
+}
+
 .tabs::-webkit-scrollbar {
   display: none;
 }

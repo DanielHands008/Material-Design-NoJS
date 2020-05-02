@@ -103,7 +103,8 @@ hr {
   padding-right: 1rem;
   padding-bottom: 3.25rem;
   max-width: calc((100vw - (100vw - 100%)) - 16px);
-  border: 1px solid #0001
+  border: 1px solid #0001;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 5px, rgba(0, 0, 0, 0.2) 0px 3px 2px;
 }
 
 .card .title-box {
@@ -151,6 +152,7 @@ table {
   overflow: hidden;
   border-collapse: collapse;
   border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
 }
 
 table tbody tr:hover {
@@ -175,6 +177,8 @@ details {
   color: var(--on-surface-color);
   background-color: var(--surface-color);
   border-radius: 4px;
+  border: 1px solid #0001;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
 }
 
 details summary {
@@ -285,6 +289,7 @@ code {
   overflow: auto;
   padding: 1rem 1.5rem;
   display: block;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
 }
 
 samp {
@@ -348,20 +353,20 @@ kbd {
 
 [elevation="0"],
 .elevation0 {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 [elevation="1"],
 .elevation1 {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px !important;
 }
 
 [elevation="2"],
 .elevation2 {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 6px, rgba(0, 0, 0, 0.2) 0px 3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 5px, rgba(0, 0, 0, 0.2) 0px 3px 2px !important;
 }
 
 [elevation="3"],
 .elevation3 {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px, rgba(0, 0, 0, 0.2) 0px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 7px, rgba(0, 0, 0, 0.2) 0px 5px 4px !important;
 }

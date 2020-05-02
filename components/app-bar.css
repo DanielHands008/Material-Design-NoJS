@@ -8,6 +8,7 @@
   justify-content: space-between;
   color: var(--app-bar-text-color);
 }
+
 .app-bar.surface-color {
   --app-bar-color: var(--surface-color);
   --app-bar-text-color: var(--on-surface-color);
@@ -46,6 +47,23 @@
 
 .app-bar .icon input+* {
   cursor: pointer;
+}
+
+.app-bar input[type="date"],
+.app-bar input[type="datetime-local"],
+.app-bar input[type="email"],
+.app-bar input[type="month"],
+.app-bar input[type="number"],
+.app-bar input[type="password"],
+.app-bar input[type="search"],
+.app-bar input[type="tel"],
+.app-bar input[type="text"],
+.app-bar input[type="time"],
+.app-bar input[type="url"],
+.app-bar input[type="week"] {
+  border-bottom: 2px solid white;
+  color: var(--on-primary-color);
+  background-color: transparent;
 }
 
 .app-bar input::placeholder {
