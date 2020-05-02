@@ -68,7 +68,7 @@
   background-color: #0001;
 }
 
-.drawer-top {
+.drawer-header {
   background-color: var(--primary-color);
   position: relative;
   width: 100%;
