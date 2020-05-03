@@ -18,7 +18,6 @@ body {
   font-family: Roboto, sans-serif;
   color: var(--on-background-color);
   background-color: var(--background-color);
-  overflow-x: hidden;
 }
 
 h1 {
@@ -260,6 +259,7 @@ ul details {
   background-color: transparent;
   margin: -1rem;
   box-shadow: none;
+  border: none;
 }
 
 ul details summary {
