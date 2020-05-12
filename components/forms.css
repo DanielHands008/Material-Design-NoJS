@@ -27,9 +27,6 @@ select {
   border-radius: 4px 4px 0px 0px;
   margin-bottom: 1px;
   appearance: none;
-  -moz-appearance: none;
-  -moz-user-select: none;
-  -webkit-appearance: none;
 }
 
 input[type="date"],
@@ -103,6 +100,9 @@ select {
   padding-right: 3rem;
   font-size: 1rem;
   cursor: pointer;
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -webkit-appearance: none;
 }
 
 select[multiple] {
@@ -312,6 +312,12 @@ button:enabled.text-btn:hover {
 
 .fab-btn button.small:enabled:hover {
   background: var(--surface-color) radial-gradient(circle, transparent 1%, var(--surface-color) 1%) center/15000%;
+}
+
+button:enabled:active {
+  background-color: white;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 button:enabled.outlined-btn:active,

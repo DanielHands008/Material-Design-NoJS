@@ -28,6 +28,7 @@
   fill: rgba(0, 0, 0, 0.54);
   box-shadow: none !important;
   background-color: transparent !important;
+  transition: background 0.8s;
 }
 
 .bottom-navigation>button>p,
@@ -49,23 +50,4 @@
 .bottom-navigation>button:focus>*,
 .bottom-navigation>button.active>* {
   transform: scale(1.1);
-}
-
-
-/* Ripple Effect */
-
-.bottom-navigation button:enabled {
-  transition: background 0.8s;
-  background: var(--surface-color) radial-gradient(circle, transparent .1%, var(--surface-color) .1%) center/150000%;
-}
-
-.bottom-navigation>button:active {
-  background-size: 100%;
-  transition: background 0s;
-  background-position: center;
-}
-
-.bottom-navigation>button:active {
-  background-color: var(--primary-color);
-  background-position: center;
 }

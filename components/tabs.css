@@ -1,8 +1,8 @@
 .tabs {
   --tabs-color: var(--primary-color);
   --tabs-text-color: var(--on-primary-color);
-  --tabs--active-text-color: var(--on-primary-color);
-  --tabs--active-underline-color: var(--secondary-color);
+  --tabs-active-text-color: var(--on-primary-color);
+  --tabs-active-underline-color: var(--secondary-color);
   margin: 0;
   padding-top: 0;
   background-color: var(--tabs-color);
@@ -16,8 +16,8 @@
 .tabs.surface-color {
   --tabs-color: var(--surface-color);
   --tabs-text-color: var(--on-surface-color);
-  --tabs--active-text-color: var(--primary-color);
-  --tabs--active-underline-color: var(--primary-color);
+  --tabs-active-text-color: var(--primary-color);
+  --tabs-active-underline-color: var(--primary-color);
 }
 
 .tabs>input[type="radio"],
@@ -68,8 +68,8 @@
 }
 
 .tabs>input[type="radio"]:checked+label {
-  color: var(--tabs--active-text-color);
-  border-bottom: 0.125rem solid var(--tabs--active-underline-color);
+  color: var(--tabs-active-text-color);
+  border-bottom: 0.125rem solid var(--tabs-active-underline-color);
 }
 
 .tabs>.tab-content {
@@ -102,6 +102,6 @@
 }
 
 .tabs>label:active {
-  background-color: var(--tabs--active-text-color);
+  background-color: var(--tabs-active-text-color);
   background-position: center;
 }

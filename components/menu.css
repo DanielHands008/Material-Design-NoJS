@@ -47,7 +47,7 @@
 
 .menu>input[type="checkbox"]+label+div button:disabled,
 .menu>input[type="checkbox"]+label+div button:enabled {
-  all: initial;
+  all: unset;
   position: relative;
   font-family: Roboto, sans-serif;
   width: calc(100% - 3rem);
