@@ -284,6 +284,7 @@ code {
   font-size: .9rem;
   word-wrap: break-word;
   line-height: 1.5;
+  border: 1px solid #0001;
   border-left: 3px solid var(--primary-color);
   border-radius: 4px;
   overflow: auto;
@@ -294,6 +295,10 @@ code {
 
 samp {
   font-size: .9rem;
+  font-family: monospace;
+  background-color: #0001;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 kbd {

@@ -4,6 +4,23 @@
   --button-text-color: var(--on-primary-color);
 }
 
+fieldset {
+  display: inline;
+  border: none;
+  padding: 0px;
+  margin: .5rem 0px;
+}
+fieldset legend {
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+
+}
+fieldset br {
+  margin: .75rem 0px;
+}
+
 input[type="date"],
 input[type="datetime-local"],
 input[type="email"],
