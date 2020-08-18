@@ -80,6 +80,8 @@ hr {
   height: 1.5rem;
   display: inline-block;
   margin: 0.75rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .thumbnail {
@@ -103,7 +105,6 @@ hr {
   padding-bottom: 3.25rem;
   max-width: calc((100vw - (100vw - 100%)) - 16px);
   border: 1px solid #0001;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 5px, rgba(0, 0, 0, 0.2) 0px 3px 2px;
 }
 
 .card .title-box {

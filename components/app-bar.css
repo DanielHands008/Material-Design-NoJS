@@ -22,7 +22,9 @@
   font-size: 1.25rem;
   line-height: 1.6;
   letter-spacing: 0.0075rem;
-  margin: 10px;
+  margin-left: .5rem;
+  margin-top: auto;
+  margin-bottom: auto;
   font-weight: 700;
   overflow: hidden;
   word-wrap: none;
