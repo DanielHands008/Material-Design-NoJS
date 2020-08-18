@@ -1,0 +1,104 @@
+md-tabs {
+    --tabs-color                 : var(--primary-color);
+    --tabs-text-color            : var(--on-primary-color);
+    --tabs-active-text-color     : var(--on-primary-color);
+    --tabs-active-underline-color: var(--secondary-color);
+    display                      : block;
+    margin                       : 0;
+    padding-top                  : 0;
+    background-color             : var(--tabs-color);
+    height                       : 3rem;
+    width                        : 100%;
+    overflow-x                   : auto;
+    -ms-overflow-style           : none;
+    scrollbar-width              : none;
+
+    md-tab {
+        user-select: none;
+
+        >input {
+            display: none;
+        }
+
+        >label {
+            background-color   : var(--tabs-color);
+            margin             : 0;
+            position           : relative;
+            height             : 3rem;
+            display            : inline-block;
+            cursor             : pointer;
+            text-align         : center;
+            color              : var(--tabs-text-color);
+            padding-left       : 32px;
+            padding-right      : 32px;
+            -webkit-box-sizing : border-box;
+            -moz-box-sizing    : border-box;
+            box-sizing         : border-box;
+            padding-top        : 13px;
+            background-position: center;
+            white-space        : nowrap;
+
+
+            span {
+                font-weight   : 500;
+                line-height   : 1.75;
+                letter-spacing: 0.02857em;
+                text-transform: uppercase;
+            }
+        }
+
+        >input[type="radio"]:checked+label {
+            color        : var(--tabs-active-text-color);
+            border-bottom: 0.125rem solid var(--tabs-active-underline-color);
+        }
+
+        md-tab-content {
+            user-select       : text;
+            display           : block;
+            padding           : 8px;
+            padding-top       : 16px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing   : border-box;
+            box-sizing        : border-box;
+            white-space       : normal;
+            margin            : 0;
+            width             : calc(100vw - (100vw - 100%));
+            position          : absolute;
+            display           : none;
+        }
+
+        >input[type="radio"]:checked+label+md-tab-content {
+            display: block;
+        }
+    }
+
+    /* Ripple Effect */
+
+    md-tab>label {
+        transition: background 0.8s;
+        background: var(--tabs-color) radial-gradient(circle, transparent 1%, var(--tabs-color) 1%) center/15000%;
+    }
+
+    md-tab>label:active {
+        background-size    : 100%;
+        transition         : background 0s;
+        background-position: center;
+    }
+
+    md-tab>label:active {
+        background-color   : var(--tabs-active-text-color);
+        background-position: center;
+    }
+
+}
+
+md-tabs.surface-color {
+    --tabs-color                 : var(--surface-color);
+    --tabs-text-color            : var(--on-surface-color);
+    --tabs-active-text-color     : var(--primary-color);
+    --tabs-active-underline-color: var(--primary-color);
+}
+
+md-tabs::-webkit-scrollbar {
+    display: none;
+}

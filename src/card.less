@@ -1,0 +1,62 @@
+md-card {
+    display           : block;
+    box-sizing        : border-box;
+    -moz-box-sizing   : border-box;
+    -webkit-box-sizing: border-box;
+    position          : relative;
+    color             : var(--on-surface-color);
+    background-color  : var(--surface-color);
+    border-radius     : 2px;
+    padding-left      : 1rem;
+    padding-right     : 1rem;
+    padding-bottom    : 3.25rem; //fix
+    max-width         : calc((100vw - (100vw - 100%)) - 16px);
+    border            : 1px solid #0001;
+    margin-right      : 12px;
+    margin-bottom     : 12px;
+
+    md-card-title-box {
+        display           : block;
+        box-sizing        : border-box;
+        -moz-box-sizing   : border-box;
+        -webkit-box-sizing: border-box;
+        width             : 100%;
+        padding-top       : 1rem;
+        padding-bottom    : 0px;
+
+
+    }
+
+    md-card-title {
+        display       : inline-block;
+        margin-top    : 0px;
+        vertical-align: top;
+        height        : 100%;
+        font-weight   : 500;
+        margin-top    : 0.25rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        letter-spacing: .0125em;
+
+        >span {
+            display  : block;
+            font-size: smaller;
+            color    : var(--on-surface-color);
+            opacity  : .5;
+        }
+    }
+
+    md-card-content {
+        display      : block;
+        margin-top   : 0.6875rem;
+        margin-bottom: 0px;
+    }
+
+    md-card-actions {
+        display : block;
+        position: absolute;
+        bottom  : 0px;
+        right   : 0px;
+        padding : .5rem;
+    }
+}

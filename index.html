@@ -2,47 +2,25 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title>Material Design NoJS</title>
-
+  <link href="dist/md-nojs.css" rel="stylesheet">
   <link href="fonts/fonts.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="components/common.css" type="text/css">
-  <link rel="stylesheet" href="components/forms.css" type="text/css">
-  <link rel="stylesheet" href="components/app-bar.css" type="text/css">
-  <link rel="stylesheet" href="components/tabs.css" type="text/css">
-  <link rel="stylesheet" href="components/drawer.css" type="text/css">
-  <link rel="stylesheet" href="components/menu.css" type="text/css">
-  <link rel="stylesheet" href="components/bottom-navigation.css" type="text/css">
-  <!-- Note: Adding the bottom-navigation.css adds padding to the bottom of tab content. Only include this file if you are going to use bottom navigation. My change that in the future. -->
-  <style>
-    body {
-      overflow-x: hidden;
-    }
-  </style>
+  <link href="material-icons/material-icons.css" rel="stylesheet">
 </head>
 
 <body>
+  <div class="md-app">
 
-  <div class="app-bar">
-    <!-- The App Bar -->
 
-    <div>
-      <!-- Left Icons -->
+    <md-app-bar elevation="3">
+      <left>
 
-      <div class="drawer icon">
-        <input type="checkbox" id="drawer">
-        <label for="drawer">
-          <i class="material-icons">menu</i>
+        <input class="md-drawer-controller" id="md-drawer-controller" type="checkbox"><label for="md-drawer-controller">
+          <icon class="material-icons">menu</icon>
         </label>
-
-        <div>
-          <!-- The App Drawer -->
-
-          <div>
-            <!-- Top Part -->
-
+        <md-drawer>
+          <top>
             <div class="drawer-header">
               <div class="avatar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
@@ -51,313 +29,354 @@
               </div>
               <div class="email">email@example.com</div>
             </div>
+            <button>A button</button>
+            <button>A button</button>
+          </top>
+          <bottom>
+            <button>A button</button>
+          </bottom>
+        </md-drawer>
 
-            <button>Button</button>
-            <button>Button</button>
-            <button>Button</button>
-            <hr>
-            <button>Button</button>
-            <button disabled>Disabled</button>
-          </div>
+        <title>Title</title>
+      </left>
+      <right>
 
-          <div>
-            <!-- Bottom Part -->
-            <button>Button</button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="title">Material Design NoJS</div>
-    </div>
-
-    <div>
-      <!-- Right Icons -->
-
-      <div class="icon">
-        <form style="white-space: nowrap;"><label><input type="text" placeholder="Search" name="search"
-              style="height:1rem;"><span tooltip="Search">
-                <i class="material-icons">search</i>
-            </span></label></form>
-      </div>
-
-      <div class="menu left icon">
-        <input type="checkbox" id="menu">
-        <label for="menu">
-          <i class="material-icons">more_vert</i>
+        <input type="checkbox" class="md-menu-controller" id="md-menu-controller"><label for="md-menu-controller">
+          <icon class="material-icons">more_vert</icon>
         </label>
-
-        <div>
+        <md-menu left class="test">
           <!-- The Menu -->
           <button>Menu Item 1</button>
           <button>Menu Item 2</button>
           <hr>
           <button>Menu Item 3</button>
           <button disabled>Menu Item Disabled</button>
-          <span>
-            <!-- Sub Menu -->
+          <md-submenu>
             <button>Sub-Menu</button>
             <div>
+              <!-- Sub Menu Items -->
               <button>Sub-Menu Item 1</button>
               <button>Sub-Menu Item 2</button>
               <button>Sub-Menu Item 3</button>
             </div>
-          </span>
-        </div>
+          </md-submenu>
+        </md-menu>
 
-      </div>
 
-    </div>
+      </right>
+    </md-app-bar>
+
+    <md-tabs elevation="3">
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab1" class="md-tab-controller" checked><label for="tab1"><span>TAB
+            1</span></label>
+        <md-tab-content>
+
+
+          <!-- First Tab Content -->
+          <button>Button</button>
+          <button class="outlined-btn">Outlined Button</button>
+          <button class="text-btn">Text Button</button>
+          <button class="text-btn" style="--button-text-color: var(--on-surface-color);">Text Button</button>
+          <button style="--button-color: var(--secondary-color)">Button</button>
+          <button style="--button-color: var(--secondary-color)" elevation="0">Button</button>
+          <button
+            style="--button-color: var(--surface-color); --button-text-color: var(--on-surface-color)">Button</button>
+          <button class="outlined-btn" style="--button-color: var(--secondary-color)">Outlined Button</button>
+          <button disabled>Button</button>
+          <button disabled class="outlined-btn">Outlined Button</button>
+          <button disabled class="text-btn">Text Button</button>
+          <br>
+          <br>
+          <!-- data-lpignore="true" is to prevent Lastpass autofill. Its here to stop Lastpass asking constantly to save the password when making changes. -->
+          <input type="text" placeholder="Text Input" data-lpignore="true">
+          <input type="password" value="Text Input" data-lpignore="true">
+          <br>
+          <input type="text" value="Text Input">
+          <input type="text" placeholder="Required" required>
+          <br>
+          <md-text-box><input type="text" data-lpignore="true" required>
+            <placeholder>Labeled Text Input</placeholder>
+          </md-text-box>
+          <br>
+          <textarea>This is a text area.</textarea>
+          <br>
+          <br>
+          <fieldset>
+            <legend>Fieldset</legend>
+            <input type="text" placeholder="Text Input" data-lpignore="true">
+            <br>
+            <button>Button</button>
+          </fieldset>
+          <br>
+          <br>
+          <input type="checkbox" id="checkbox1"><label for="checkbox1">Checkbox</label>
+          <input type="checkbox" id="checkbox2" checked><label for="checkbox2">Checkbox</label>
+          <input type="checkbox" id="checkbox3" checked><label for="checkbox3"
+            style="--checkbox-radio-color: var(--primary-color)">Checkbox</label>
+          <input type="checkbox" id="checkbox4" disabled><label for="checkbox4">Checkbox</label>
+          <input type="checkbox" id="checkbox5" disabled checked><label for="checkbox5">Checkbox</label>
+          <br>
+          <input type="checkbox" id="indeterminate1" checked><label class="md-indeterminate-checkbox"
+            for="indeterminate1">Indeterminate Checkbox</label>
+          <input type="checkbox" id="indeterminate2" checked><label class="md-indeterminate-checkbox"
+            for="indeterminate2" style="--checkbox-radio-color: var(--primary-color)">Indeterminate Checkbox</label>
+          <br>
+          <input type="checkbox" id="switch1" checked><label class="md-switch" for="switch1">Switch</label>
+          <input type="checkbox" id="switch2" checked><label class="md-switch" for="switch2"
+            style="--checkbox-radio-color: var(--primary-color)">Switch</label>
+          <br>
+          <input type="radio" name="radio" id="radio1"><label for="radio1">Radio</label>
+          <input type="radio" name="radio" id="radio2" checked><label for="radio2">Radio</label>
+          <input type="radio" name="radio" id="radio3" checked><label for="radio3"
+            style="--checkbox-radio-color: var(--primary-color)">Radio</label>
+          <input type="radio" name="radio" id="radio4" disabled><label for="radio4">Radio</label>
+          <input type="radio" id="radio3" checked disabled><label for="radio3">Radio</label>
+          <br>
+          <select id="selection" name="selection">
+            <option value="selection1" selected>Selection 1</option>
+            <option value="selection2">Selection 2</option>
+            <option value="selection3">Selection 3</option>
+            <option value="selection4">Selection 4</option>
+          </select><br>
+          <select name="selectionMultiple" size="3" multiple>
+            <option value="selection1">Selection 1</option>
+            <option value="selection2">Selection 2</option>
+            <option value="selection3">Selection 3</option>
+            <option value="selection4">Selection 4</option>
+          </select>
+
+          <md-floating-action-button>
+            <button class="material-icons">add</button>
+            <button class="small material-icons">add</button>
+            <button class="small material-icons">add</button>
+            <button class="small material-icons">add</button>
+            <button class="small material-icons">add</button>
+            <button class="small material-icons">add</button>
+            <button class="small material-icons">add</button>
+          </md-floating-action-button>
+
+        </md-tab-content>
+      </md-tab>
+
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab2" class="md-tab-controller"><label for="tab2"><span>TAB
+            2</span></label>
+        <md-tab-content>
+
+          <md-card style="width: 500px;" elevation="2">
+            <md-card-title-box>
+              <div class="thumbnail">
+                <svg style="fill: #008cff; background-color: #7ccfff;" width="100%" height="100%" viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <ellipse ry="25" rx="25" cy="36" cx="50.5" />
+                  <ellipse ry="50" rx="50" cy="115" cx="50" /></svg>
+              </div>
+              <md-card-title>Title<span>Sub-title</span></md-card-title>
+            </md-card-title-box>
+            <md-card-content>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </md-card-content>
+            <md-card-actions>
+              <button class="text-btn">Action 1</button><button class="text-btn">Action 2</button>
+            </md-card-actions>
+          </md-card>
+
+        </md-tab-content>
+      </md-tab>
+
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab3" class="md-tab-controller"><label for="tab3"><span>TAB
+            3</span></label>
+        <md-tab-content>
+          <table elevation="1">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Smith</td>
+                <td>27</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <details elevation="1">
+            <summary><span>Expand</span></summary>
+            <div>
+              Content
+            </div>
+          </details>
+          <br>
+
+          <details-group>
+            <details elevation="1">
+              <summary><span>Expand 1</span></summary>
+              <div>
+                Content 1
+              </div>
+            </details>
+            <details elevation="1">
+              <summary><span>Expand 2</span></summary>
+              <div>
+                Content 2
+              </div>
+            </details>
+            <details elevation="1">
+              <summary><span>Expand 3</span></summary>
+              <div>
+                Content 3
+              </div>
+            </details>
+          </details-group>
+
+          <br>
+          <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+          </ul>
+          <ul>
+            <li>
+              <details>
+                <summary><span>First Item</span></summary>
+                <div>
+                  First Item Content
+                </div>
+            </li>
+            <li>
+              <details>
+                <summary><span>Second Item</span></summary>
+                <div>
+                  Second Item Content
+                </div>
+            </li>
+            <li>
+              <details>
+                <summary><span>Third Item</span></summary>
+                <div>
+                  Third Item Content
+                </div>
+            </li>
+          </ul>
+        </md-tab-content>
+      </md-tab>
+
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab4" class="md-tab-controller"><label for="tab4"><span>TAB
+            4</span></label>
+        <md-tab-content>
+          <p><span tooltip="Tooltip">Tooltip.</span></p>
+          <pre><code elevation="1">#header h1 a {
+            display: block;
+            width: 300px;
+            height: 80px;
+          }</code></pre>
+          <br>
+          <samp>Sample output from a computer program</samp>
+          <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+        </md-tab-content>
+      </md-tab>
+
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab5" class="md-tab-controller"><label for="tab5"><span>TAB
+            5</span></label>
+        <md-tab-content>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make
+            a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+            essentially
+            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages,
+            and more recently with
+            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <hr>
+          <p>More text.</p>
+        </md-tab-content>
+      </md-tab>
+
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab6" class="md-tab-controller"><label for="tab6"><span>TAB
+            6</span></label>
+        <md-tab-content>
+
+          <md-snack-bar class="show dont-block">
+            <text>
+              Snack bar demo, remove the "show" class to hide.
+            </text>
+            <button style="margin: 8px; height: 32px;" class="text-btn">undo</button>
+          </md-snack-bar>
+
+          <md-dialog class="show">
+            <md-card elevation="3" style="max-width: 400px">
+
+              <md-card-title>Dialog Title</md-card-title>
+
+              <md-card-content>
+                <p>
+                  This is the description for the dialog box.
+                  <br>
+                  Remove the "show" class to hide.
+                  <br>
+                  The class "dont-block" can be removed from a dialog to block the user interacting with the background.
+                </p>
+              </md-card-content>
+
+              <md-card-actions>
+                <button class="text-btn">OK</button>
+                <button class="text-btn">Cancel</button>
+              </md-card-actions>
+
+          </md-dialog>
+
+        </md-tab-content>
+      </md-tab>
+
+      <md-tab>
+        <input type="radio" name="tabs1" id="tab7" class="md-tab-controller"><label for="tab7"><span>TAB
+            7</span></label>
+        <md-tab-content>
+          <span class="material-icons" style="font-size: 2rem;">skip_previous<span style="letter-spacing: -.35em;">play_arrow pause</span> stop skip_next</span>
+        </md-tab-content>
+      </md-tab>
+
+    </md-tabs>
+
 
   </div>
-
-  <div class="tabs" elevation="3">
-    <!-- Tabs -->
-
-    <input type="radio" name="tab" id="tab1" checked><label for="tab1"><span>Forms</span></label>
-    <!-- First Tab Button -->
-
-    <div class="tab-content">
-      <!-- First Tab Content -->
-      <button>Button</button>
-      <button class="outlined-btn">Outlined Button</button>
-      <button class="text-btn">Text Button</button>
-      <button class="text-btn" style="--button-text-color: var(--on-surface-color);">Text Button</button>
-      <br>
-      <br>
-      <button style="--button-color: var(--secondary-color)">Button</button>
-      <button style="--button-color: var(--secondary-color)" elevation="0">Button</button>
-      <button style="--button-color: var(--surface-color); --button-text-color: var(--on-surface-color)">Button</button>
-      <button class="outlined-btn" style="--button-color: var(--secondary-color)">Outlined Button</button>
-      <br>
-      <br>
-      <button disabled>Button</button>
-      <button disabled class="outlined-btn">Outlined Button</button>
-      <button disabled class="text-btn">Text Button</button>
-      <br>
-      <br>
-      <!-- data-lpignore="true" is to prevent Lastpass autofill. Its here to stop Lastpass asking constantly to save the password when making changes. -->
-      <input type="text" placeholder="Text Input" data-lpignore="true">
-      <input type="password" value="Text Input" data-lpignore="true">
-      <br>
-      <input type="text" value="Text Input">
-      <input type="text" placeholder="Required" required>
-      <br>
-      <br>
-      <textarea>This is a text area.</textarea>
-      <br>
-      <br>
-      <fieldset>
-        <legend>Fieldset</legend>
-        <input type="text" placeholder="Text Input" data-lpignore="true">
-        <br>
-        <button>Button</button>
-      </fieldset>
-      <br>
-      <br>
-      <input type="checkbox" id="checkbox1"><label for="checkbox1">Checkbox</label>
-      <input type="checkbox" id="checkbox2" checked><label for="checkbox2">Checkbox</label>
-      <input type="checkbox" id="checkbox3" checked><label for="checkbox3"
-        style="--checkbox-radio-color: var(--primary-color)">Checkbox</label>
-      <input type="checkbox" id="checkbox4" disabled><label for="checkbox4">Checkbox</label>
-      <input type="checkbox" id="checkbox5" disabled checked><label for="checkbox5">Checkbox</label>
-      <br>
-      <br>
-      <input type="radio" name="radio" id="radio1"><label for="radio1">Radio</label>
-      <input type="radio" name="radio" id="radio2" checked><label for="radio2">Radio</label>
-      <input type="radio" name="radio" id="radio3" checked><label for="radio3"
-        style="--checkbox-radio-color: var(--primary-color)">Radio</label>
-      <input type="radio" name="radio" id="radio4" disabled><label for="radio4">Radio</label>
-      <input type="radio" id="radio3" checked disabled><label for="radio3">Radio</label>
-      <div class="fab-btn">
-        <button class="material-icons">add</button>
-        <button class="small material-icons">add</button>
-        <button class="small material-icons">add</button>
-        <button class="small material-icons">add</button>
-        <button class="small material-icons">add</button>
-        <button class="small material-icons">add</button>
-        <button class="small material-icons">add</button>
-      </div>
-      <br>
-      <select id="selection" name="selection">
-        <option value="selection1" selected>Selection 1</option>
-        <option value="selection2">Selection 2</option>
-        <option value="selection3">Selection 3</option>
-        <option value="selection4">Selection 4</option>
-      </select><br>
-      <select name="selectionMultiple" size="3" multiple>
-        <option value="selection1">Selection 1</option>
-        <option value="selection2">Selection 2</option>
-        <option value="selection3">Selection 3</option>
-        <option value="selection4">Selection 4</option>
-      </select>
-    </div>
-
-    <input type="radio" name="tab" id="tab2"><label for="tab2"><span>Layout</span></label>
-    <!-- Second Tab Button -->
-    <div class="tab-content">
-      <!-- Second Tab Content -->
-      <div class="card" style="width: 500px;" elevation="2">
-        <div class="title-box">
-          <div class="thumbnail"><svg style="fill: #008cff; background-color: #7ccfff;" width="100%" height="100%"
-              viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <ellipse ry="25" rx="25" cy="36" cx="50.5" />
-              <ellipse ry="50" rx="50" cy="115" cx="50" /></svg></div>
-          <div class="card-title">Title<span>Sub-title</span></div>
-        </div>
-        <div>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-          unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with
-          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-        <div class="buttons"><button class="text-btn">Action 1</button><button class="text-btn">Action 2</button></div>
-      </div>
-      <br>
-      <table elevation="1">
-        <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-          <tr>
-            <td>John</td>
-            <td>Smith</td>
-            <td>27</td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <details elevation="1">
-        <summary><span>Expand</span></summary>
-        <div>
-          Content
-        </div>
-      </details>
-      <br>
-      <div class="details-group">
-        <details elevation="1">
-          <summary><span>Expand 1</span></summary>
-          <div>
-            Content 1
-          </div>
-        </details>
-        <details elevation="1">
-          <summary><span>Expand 2</span></summary>
-          <div>
-            Content 2
-          </div>
-        </details>
-        <details elevation="1">
-          <summary><span>Expand 3</span></summary>
-          <div>
-            Content 3
-          </div>
-        </details>
-      </div>
-      <br>
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-      </ul>
-      <ul>
-        <li>
-          <details>
-            <summary><span>First Item</span></summary>
-            <div>
-              First Item Content
-            </div>
-        </li>
-        <li>
-          <details>
-            <summary><span>Second Item</span></summary>
-            <div>
-              Second Item Content
-            </div>
-        </li>
-        <li>
-          <details>
-            <summary><span>Third Item</span></summary>
-            <div>
-              Third Item Content
-            </div>
-        </li>
-      </ul>
-    </div>
-
-    <input type="radio" name="tab" id="tab3"><label for="tab3"><span>Other</span></label>
-    <!-- Third Tab Button -->
-    <div class="tab-content">
-      <!-- Third Tab Content -->
-      <pre><code elevation="1">#header h1 a {
-      display: block;
-      width: 300px;
-      height: 80px;
-    }</code></pre>
-      <br>
-      <samp>Sample output from a computer program</samp>
-      <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
-    </div>
-
-    <input type="radio" name="tab" id="tab4"><label for="tab4"><span>Text</span></label>
-    <!-- Fourth Tab Button -->
-    <div class="tab-content">
-      <!-- Fourth Tab Content -->
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with
-        desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-  </div>
-
-  <div class="bottom-navigation">
-    <!-- Bottom Navigation -->
-    <button class="bottom-btn">
-      <div>
-        <i class="material-icons">home</i>
-      </div>
-      <p>Home</p>
-    </button>
-    <button class="bottom-btn">
-      <div>
-        <i class="material-icons">favorite</i>
-      </div>
-      <p>Likes</p>
-    </button>
-    <button class="bottom-btn">
-      <div>
-        <i class="material-icons">star</i>
-      </div>
-      <p>Favorites</p>
-    </button>
-  </div>
-
 </body>
 
 </html>

@@ -1,0 +1,102 @@
+md-drawer {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    position        : fixed;
+    left            : 0;
+    top             : 0;
+    background-color: var(--surface-color);
+    color           : var(--on-surface-color);
+    height          : calc(100vh - (100vh - 100%));
+    min-width       : 15rem;
+    z-index         : 1000;
+    transform       : translate(-100%, 0);
+    transition      : transform 100ms ease-in-out;
+
+    >top,
+    >bottom {
+        display: inline;
+    }
+
+    button {
+        margin            : 0px;
+        width             : 100%;
+        border            : none;
+        outline           : none;
+        appearance        : none;
+        -moz-appearance   : none;
+        -webkit-appearance: none;
+        box-sizing        : border-box;
+        -moz-box-sizing   : border-box;
+        -webkit-box-sizing: border-box;
+        font-family       : Roboto, sans-serif;
+        padding           : 0.625rem;
+        height            : 2.875rem;
+        font-size         : large;
+        text-align        : left;
+        cursor            : pointer;
+        background-color  : transparent;
+
+        &:disabled {
+            color: rgba(128, 128, 128, .5);
+        }
+
+        &:not(:disabled):hover {
+            background-color: #0001;
+        }
+
+    }
+
+    .drawer-header {
+        background-color: var(--primary-color);
+        position        : relative;
+        width           : 100%;
+        height          : 8rem;
+    }
+
+    .email {
+        position   : absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color      : var(--on-primary-color);
+        margin     : 0.625rem;
+        bottom     : 0;
+    }
+
+    .avatar {
+        position        : absolute;
+        width           : 3.125rem;
+        height          : 3.125rem;
+        border-radius   : 100%;
+        overflow        : hidden;
+        box-shadow      : 1px 1px 1px #0005;
+        margin          : 0.625rem;
+        fill            : #008cff;
+        background-color: #7ccfff;
+    }
+}
+
+.md-drawer-controller {
+    display: none;
+}
+
+.md-drawer-controller+label {
+    display: block;
+    cursor : pointer;
+    margin : auto;
+}
+
+.md-drawer-controller:checked+label+md-drawer {
+    transform: translate(0, 0);
+}
+
+.md-drawer-controller:checked+label::after {
+    content         : '';
+    background-color: #0005;
+    position        : fixed;
+    width           : calc(100vw - (100vw - 100%));
+    height          : calc(100vh - (100vh - 100%));
+    top             : 0;
+    left            : 0;
+    z-index         : 1000;
+}

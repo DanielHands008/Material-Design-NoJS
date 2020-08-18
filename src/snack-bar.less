@@ -1,0 +1,30 @@
+md-snack-bar {
+    display         : flex;
+    position        : fixed;
+    bottom          : 0;
+    left            : 0;
+    background-color: var(--snack-bar-background);
+    z-index         : 1010;
+    color           : var(--on-snack-bar);
+    border-radius   : 4px;
+    margin-left     : 16px;
+    margin-right    : 16px;
+    margin-bottom   : 32px;
+    transition      : transform 200ms ease-out, opacity 200ms ease-out;
+    transform: translate(0px, 90px);
+    opacity  : 0;
+
+    text {
+        display: inline;
+        margin: auto 2rem auto 1rem;
+    }
+
+    button {
+        margin: 8px; height: 32px;
+    }
+
+    &.show {
+        transform       : translate(0px, 0px);
+        opacity         : 1;
+    }
+}

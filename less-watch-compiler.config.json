@@ -1,0 +1,6 @@
+{
+    "watchFolder": "src",
+    "outputFolder": "dist",
+    "mainFile": "md-nojs.less",
+    "enableJs": false
+}

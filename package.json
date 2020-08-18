@@ -1,0 +1,19 @@
+{
+  "name": "material-design-nojs-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "less-watch-compiler",
+    "start": "lessc src/md-nojs.less > dist/md-nojs.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^3.12.2"
+  },
+  "dependencies": {
+    "less-watch-compiler": "^1.14.6"
+  }
+}

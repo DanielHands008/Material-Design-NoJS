@@ -1,0 +1,48 @@
+.md-app {
+    --primary-color          : #2196f3;
+    --primary-variant-color  : #1769aa;
+    --secondary-color        : #f50057;
+    --secondary-variant-color: #ab003c;
+    --background-color       : #fff;
+    --surface-color          : #fff;
+    --error-color            : #f44336;
+    --on-primary-color       : white;
+    --on-secondary-color     : #fff;
+    --on-background-color    : #000000;
+    --on-surface-color       : #000;
+    --on-error-color         : #FFFFFF;
+    --snack-bar-background   : #323232;
+    --on-snack-bar           : #FFF;
+
+    --checkbox-radio-color: var(--secondary-color);
+    --button-color        : var(--primary-color);
+    --button-text-color   : var(--on-primary-color);
+
+    width      : 100vw;
+    height     : 100vh;
+    margin     : 0;
+    padding    : 0;
+    position   : absolute;
+    left       : 0;
+    top        : 0;
+    overflow-x : hidden;
+    overflow-y : auto;
+    font-family: Roboto, sans-serif;
+
+    .material-icons {
+        user-select: none;
+    }
+
+    @import "common.less";
+    @import "forms.less";
+    @import "app-bar.less";
+    @import "drawer.less";
+    @import "menu.less";
+    @import "tabs.less";
+    @import "snack-bar.less";
+    @import "dialog.less";
+    @import "card.less";
+    @import "layout.less";
+    @import "text.less";
+    @import "properties.less";
+}

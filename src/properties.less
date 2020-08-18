@@ -1,0 +1,68 @@
+[tooltip] {
+    position: relative;
+}
+
+[tooltip]:after,
+[tooltip-left]:after,
+[tooltip-right]:after {
+    position        : absolute;
+    color           : #FFF;
+    background-color: #232F34BB;
+    border-radius   : 0.25rem;
+    padding         : .5rem;
+    white-space     : nowrap;
+    display         : none;
+    font-size       : .8rem;
+}
+
+[tooltip]:after {
+    content  : attr(tooltip);
+    right    : initial;
+    left     : 50%;
+    top      : 100%;
+    transform: translate(-50%, .5rem);
+}
+
+
+[tooltip-left]:after {
+    content  : attr(tooltip-left);
+    left     : initial;
+    right    : calc(100%);
+    top      : 50%;
+    transform: translate(-0.5rem, -50%);
+}
+
+[tooltip-right].right:after {
+    content  : attr(tooltip-right);
+    left     : calc(100%);
+    right    : initial;
+    top      : 50%;
+    transform: translate(.5rem, -50%);
+}
+
+[tooltip]:hover:after,
+[tooltip-left]:hover:after,
+[tooltip-right]:hover:after {
+    display : block;
+    position: absolute;
+}
+
+[elevation="0"],
+.elevation0 {
+    box-shadow: none !important;
+}
+
+[elevation="1"],
+.elevation1 {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px !important;
+}
+
+[elevation="2"],
+.elevation2 {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 5px, rgba(0, 0, 0, 0.2) 0px 3px 2px !important;
+}
+
+[elevation="3"],
+.elevation3 {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 7px, rgba(0, 0, 0, 0.2) 0px 5px 4px !important;
+}

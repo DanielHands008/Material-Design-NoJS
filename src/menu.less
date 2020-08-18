@@ -1,0 +1,130 @@
+md-menu {
+    margin-right: 1rem;
+    margin-top  : .5rem;
+
+    &,
+    md-submenu>div {
+        display         : flex;
+        position        : absolute;
+        flex-direction  : column;
+        background-color: var(--surface-color);
+        color           : var(--on-surface-color);
+        top             : 2rem;
+        border-radius   : 4px;
+        padding-top     : .5rem;
+        padding-bottom  : .5rem;
+        z-index         : 996;
+        transform       : scale(0);
+        transform-origin: top left;
+        transition      : transform 100ms ease-in-out;
+        border          : 1px solid #0001;
+        user-select     : none;
+    }
+
+    button {
+        position        : relative;
+        width           : 100%;
+        border          : none;
+        padding-left    : 1rem;
+        padding-right   : 2rem;
+        height          : 2rem;
+        text-align      : left;
+        cursor          : pointer;
+        white-space     : nowrap;
+        background-color: transparent;
+        font-size       : medium;
+
+        &:disabled {
+            color: rgba(128, 128, 128, .5);
+        }
+
+        &:not(:disabled):hover {
+            box-shadow      : none;
+            background-color: #0001;
+        }
+    }
+
+    md-submenu {
+        position: relative;
+
+        div {
+            display     : none;
+            position    : absolute;
+            top         : 0px;
+            margin-right: 0px;
+            transform   : translateX(calc(100% + 1.19rem));
+        }
+    }
+
+    md-submenu>button:before {
+        content   : 'arrow_right';
+        display   : inline-block;
+        position  : absolute;
+        right     : 0px;
+        margin-top: 0.1rem;
+
+        font-family   : 'Material Icons';
+        font-weight   : normal;
+        font-style    : normal;
+        font-size     : 2rem;
+        /* Preferred icon size */
+        display       : inline-block;
+        line-height   : 1rem;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap     : normal;
+        white-space   : nowrap;
+        direction     : ltr;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering        : optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+    }
+
+    md-submenu:hover>div {
+        display: flex;
+    }
+}
+
+md-menu[left] {
+    transform-origin: top right;
+    right           : 0px;
+
+    md-submenu {
+        div {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.md-menu-controller {
+    display: none;
+}
+
+.md-menu-controller+label {
+    display: block;
+    cursor : pointer;
+    margin : auto;
+}
+
+.md-menu-controller:checked+label+md-menu {
+    transform: scale(1);
+}
+
+.md-menu-controller:checked+label:after {
+    content : '';
+    position: fixed;
+    width   : 100vw;
+    height  : 100vh;
+    top     : 0;
+    left    : 0;
+    opacity : 0;
+    z-index : 995;
+}
