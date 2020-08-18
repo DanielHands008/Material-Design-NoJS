@@ -1,0 +1,1270 @@
+.md-app {
+  --primary-color: #2196f3;
+  --primary-variant-color: #1769aa;
+  --secondary-color: #f50057;
+  --secondary-variant-color: #ab003c;
+  --background-color: #fff;
+  --surface-color: #fff;
+  --error-color: #f44336;
+  --on-primary-color: white;
+  --on-secondary-color: #fff;
+  --on-background-color: #000000;
+  --on-surface-color: #000;
+  --on-error-color: #FFFFFF;
+  --snack-bar-background: #323232;
+  --on-snack-bar: #FFF;
+  --checkbox-radio-color: var(--secondary-color);
+  --button-color: var(--primary-color);
+  --button-text-color: var(--on-primary-color);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: Roboto, sans-serif;
+}
+.md-app .material-icons {
+  user-select: none;
+}
+.md-app md-tab-content,
+.md-app .md-form {
+  /* Ripple effect */
+}
+.md-app md-tab-content fieldset,
+.md-app .md-form fieldset {
+  display: inline;
+  border: none;
+  padding: 0px;
+  margin: 0.5rem 0px;
+}
+.md-app md-tab-content fieldset legend,
+.md-app .md-form fieldset legend {
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+.md-app md-tab-content input[type="date"],
+.md-app .md-form input[type="date"],
+.md-app md-tab-content input[type="datetime-local"],
+.md-app .md-form input[type="datetime-local"],
+.md-app md-tab-content input[type="email"],
+.md-app .md-form input[type="email"],
+.md-app md-tab-content input[type="month"],
+.md-app .md-form input[type="month"],
+.md-app md-tab-content input[type="number"],
+.md-app .md-form input[type="number"],
+.md-app md-tab-content input[type="password"],
+.md-app .md-form input[type="password"],
+.md-app md-tab-content input[type="search"],
+.md-app .md-form input[type="search"],
+.md-app md-tab-content input[type="tel"],
+.md-app .md-form input[type="tel"],
+.md-app md-tab-content input[type="text"],
+.md-app .md-form input[type="text"],
+.md-app md-tab-content input[type="time"],
+.md-app .md-form input[type="time"],
+.md-app md-tab-content input[type="url"],
+.md-app .md-form input[type="url"],
+.md-app md-tab-content input[type="week"],
+.md-app .md-form input[type="week"],
+.md-app md-tab-content textarea,
+.md-app .md-form textarea,
+.md-app md-tab-content select,
+.md-app .md-form select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #AFAFAF;
+  color: var(--on-surface-color);
+  background-color: #f5f5f5;
+  border-radius: 4px 4px 0px 0px;
+  appearance: none;
+  height: 2rem;
+}
+.md-app md-tab-content input[type="date"]:hover,
+.md-app .md-form input[type="date"]:hover,
+.md-app md-tab-content input[type="datetime-local"]:hover,
+.md-app .md-form input[type="datetime-local"]:hover,
+.md-app md-tab-content input[type="email"]:hover,
+.md-app .md-form input[type="email"]:hover,
+.md-app md-tab-content input[type="month"]:hover,
+.md-app .md-form input[type="month"]:hover,
+.md-app md-tab-content input[type="number"]:hover,
+.md-app .md-form input[type="number"]:hover,
+.md-app md-tab-content input[type="password"]:hover,
+.md-app .md-form input[type="password"]:hover,
+.md-app md-tab-content input[type="search"]:hover,
+.md-app .md-form input[type="search"]:hover,
+.md-app md-tab-content input[type="tel"]:hover,
+.md-app .md-form input[type="tel"]:hover,
+.md-app md-tab-content input[type="text"]:hover,
+.md-app .md-form input[type="text"]:hover,
+.md-app md-tab-content input[type="time"]:hover,
+.md-app .md-form input[type="time"]:hover,
+.md-app md-tab-content input[type="url"]:hover,
+.md-app .md-form input[type="url"]:hover,
+.md-app md-tab-content input[type="week"]:hover,
+.md-app .md-form input[type="week"]:hover,
+.md-app md-tab-content textarea:hover,
+.md-app .md-form textarea:hover,
+.md-app md-tab-content select:hover,
+.md-app .md-form select:hover {
+  border-bottom: 2px solid var(--on-surface-color);
+  background-color: #ECECEC;
+}
+.md-app md-tab-content input[type="date"]:focus,
+.md-app .md-form input[type="date"]:focus,
+.md-app md-tab-content input[type="datetime-local"]:focus,
+.md-app .md-form input[type="datetime-local"]:focus,
+.md-app md-tab-content input[type="email"]:focus,
+.md-app .md-form input[type="email"]:focus,
+.md-app md-tab-content input[type="month"]:focus,
+.md-app .md-form input[type="month"]:focus,
+.md-app md-tab-content input[type="number"]:focus,
+.md-app .md-form input[type="number"]:focus,
+.md-app md-tab-content input[type="password"]:focus,
+.md-app .md-form input[type="password"]:focus,
+.md-app md-tab-content input[type="search"]:focus,
+.md-app .md-form input[type="search"]:focus,
+.md-app md-tab-content input[type="tel"]:focus,
+.md-app .md-form input[type="tel"]:focus,
+.md-app md-tab-content input[type="text"]:focus,
+.md-app .md-form input[type="text"]:focus,
+.md-app md-tab-content input[type="time"]:focus,
+.md-app .md-form input[type="time"]:focus,
+.md-app md-tab-content input[type="url"]:focus,
+.md-app .md-form input[type="url"]:focus,
+.md-app md-tab-content input[type="week"]:focus,
+.md-app .md-form input[type="week"]:focus,
+.md-app md-tab-content textarea:focus,
+.md-app .md-form textarea:focus,
+.md-app md-tab-content select:focus,
+.md-app .md-form select:focus {
+  border-bottom: 2px solid var(--primary-color);
+  background-color: #DBDBDB;
+}
+.md-app md-tab-content input[type="date"]:invalid,
+.md-app .md-form input[type="date"]:invalid,
+.md-app md-tab-content input[type="datetime-local"]:invalid,
+.md-app .md-form input[type="datetime-local"]:invalid,
+.md-app md-tab-content input[type="email"]:invalid,
+.md-app .md-form input[type="email"]:invalid,
+.md-app md-tab-content input[type="month"]:invalid,
+.md-app .md-form input[type="month"]:invalid,
+.md-app md-tab-content input[type="number"]:invalid,
+.md-app .md-form input[type="number"]:invalid,
+.md-app md-tab-content input[type="password"]:invalid,
+.md-app .md-form input[type="password"]:invalid,
+.md-app md-tab-content input[type="search"]:invalid,
+.md-app .md-form input[type="search"]:invalid,
+.md-app md-tab-content input[type="tel"]:invalid,
+.md-app .md-form input[type="tel"]:invalid,
+.md-app md-tab-content input[type="text"]:invalid,
+.md-app .md-form input[type="text"]:invalid,
+.md-app md-tab-content input[type="time"]:invalid,
+.md-app .md-form input[type="time"]:invalid,
+.md-app md-tab-content input[type="url"]:invalid,
+.md-app .md-form input[type="url"]:invalid,
+.md-app md-tab-content input[type="week"]:invalid,
+.md-app .md-form input[type="week"]:invalid,
+.md-app md-tab-content textarea:invalid,
+.md-app .md-form textarea:invalid,
+.md-app md-tab-content select:invalid,
+.md-app .md-form select:invalid {
+  border-bottom: 2px solid var(--error-color);
+}
+.md-app md-tab-content md-text-box,
+.md-app .md-form md-text-box {
+  position: relative;
+  display: inline-block;
+}
+.md-app md-tab-content md-text-box input,
+.md-app .md-form md-text-box input {
+  margin: 0 !important;
+  padding-top: 1rem !important;
+  padding-bottom: 0rem !important;
+}
+.md-app md-tab-content md-text-box input + placeholder,
+.md-app .md-form md-text-box input + placeholder {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  left: 0.5rem;
+  top: 1rem;
+  transition: 0.2s ease all;
+}
+.md-app md-tab-content md-text-box input:focus ~ placeholder,
+.md-app .md-form md-text-box input:focus ~ placeholder,
+.md-app md-tab-content md-text-box input:not(:focus):valid ~ placeholder,
+.md-app .md-form md-text-box input:not(:focus):valid ~ placeholder {
+  top: 0.3rem;
+  left: 0.5rem;
+  font-size: 11px;
+  opacity: 1;
+}
+.md-app md-tab-content md-text-box input:focus ~ placeholder,
+.md-app .md-form md-text-box input:focus ~ placeholder {
+  color: var(--primary-color);
+}
+.md-app md-tab-content md-text-box input:invalid ~ placeholder,
+.md-app .md-form md-text-box input:invalid ~ placeholder {
+  color: var(--error-color);
+}
+.md-app md-tab-content textarea,
+.md-app .md-form textarea,
+.md-app md-tab-content select,
+.md-app .md-form select {
+  height: unset;
+}
+.md-app md-tab-content input::placeholder,
+.md-app .md-form input::placeholder {
+  opacity: 0.5;
+  color: var(--on-surface-color);
+}
+.md-app md-tab-content select,
+.md-app .md-form select {
+  padding-right: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -webkit-appearance: none;
+}
+.md-app md-tab-content select[multiple],
+.md-app .md-form select[multiple] {
+  padding-right: 2rem;
+}
+.md-app md-tab-content select:not([multiple]),
+.md-app .md-form select:not([multiple]) {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="grey" transform="rotate(90 0 0)" width="16" height="16" viewBox="0 0 24 24"><path d="M6 0l12 12-12 12z"/></svg>') calc(100% - 0.5rem) 50% no-repeat;
+}
+.md-app md-tab-content select:focus,
+.md-app .md-form select:focus {
+  background-color: #0001;
+}
+.md-app md-tab-content button,
+.md-app .md-form button {
+  min-width: 4rem;
+  height: 2.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  background-position: center;
+  transition: background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+  margin: 0;
+}
+.md-app md-tab-content button:not(.outlined-btn):not(.text-btn):enabled,
+.md-app .md-form button:not(.outlined-btn):not(.text-btn):enabled {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.md-app md-tab-content button.outlined-btn,
+.md-app .md-form button.outlined-btn,
+.md-app md-tab-content button.text-btn,
+.md-app .md-form button.text-btn {
+  --button-text-color: var(--button-color);
+  border: 1px solid var(--button-color);
+  color: var(--button-text-color);
+  background-color: transparent;
+}
+.md-app md-tab-content button.text-btn,
+.md-app .md-form button.text-btn {
+  border: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.md-app md-tab-content button:disabled,
+.md-app .md-form button:disabled {
+  color: rgba(128, 128, 128, 0.5);
+}
+.md-app md-tab-content button:not(.outlined-btn):not(.text-btn):disabled,
+.md-app .md-form button:not(.outlined-btn):not(.text-btn):disabled {
+  background-color: rgba(128, 128, 128, 0.14);
+}
+.md-app md-tab-content button.outlined-btn:disabled,
+.md-app .md-form button.outlined-btn:disabled {
+  border: 1px solid rgba(128, 128, 128, 0.14);
+}
+.md-app md-tab-content button:enabled:hover,
+.md-app .md-form button:enabled:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+.md-app md-tab-content button:enabled:not(.outlined-btn):not(.text-btn):hover,
+.md-app .md-form button:enabled:not(.outlined-btn):not(.text-btn):hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller),
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller),
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller),
+.md-app .md-form input[type="radio"]:not(.md-tab-controller) {
+  display: none;
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label,
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller) + label,
+.md-app .md-form input[type="radio"]:not(.md-tab-controller) + label {
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  letter-spacing: 0.00938em;
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label:before,
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller) + label:before,
+.md-app .md-form input[type="radio"]:not(.md-tab-controller) + label:before {
+  background-color: transparent;
+  position: relative;
+  vertical-align: top;
+  margin-right: 0.4rem;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1.6rem;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label:before,
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller):checked + label:before,
+.md-app .md-form input[type="radio"]:not(.md-tab-controller):checked + label:before {
+  color: var(--checkbox-radio-color);
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label:before {
+  content: 'check_box_outline_blank';
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label:before {
+  content: 'check_box';
+  color: var(--checkbox-radio-color);
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label.md-indeterminate-checkbox:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label.md-indeterminate-checkbox:before {
+  content: 'indeterminate_check_box';
+  color: var(--checkbox-radio-color);
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label.md-switch:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller) + label.md-switch:before {
+  content: 'toggle_off';
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  margin-top: -0.2rem;
+  vertical-align: middle;
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label.md-switch:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):checked + label.md-switch:before {
+  content: 'toggle_on';
+}
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller) + label:before,
+.md-app .md-form input[type="radio"]:not(.md-tab-controller) + label:before {
+  content: 'radio_button_unchecked';
+}
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller):checked + label:before,
+.md-app .md-form input[type="radio"]:not(.md-tab-controller):checked + label:before {
+  content: 'radio_button_checked';
+  color: var(--checkbox-radio-color);
+}
+.md-app md-tab-content input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):disabled + label:before,
+.md-app .md-form input[type="checkbox"]:not(.md-drawer-controller):not(.md-menu-controller):disabled + label:before,
+.md-app md-tab-content input[type="radio"]:not(.md-tab-controller):disabled + label:before,
+.md-app .md-form input[type="radio"]:not(.md-tab-controller):disabled + label:before {
+  color: #979797;
+}
+.md-app md-tab-content md-floating-action-button,
+.md-app .md-form md-floating-action-button {
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  right: 56px;
+  bottom: 56px;
+  height: 4.375rem;
+  width: 4.375rem;
+  overflow: hidden;
+  transition: height 0ms linear 1500ms;
+}
+.md-app md-tab-content md-floating-action-button:hover,
+.md-app .md-form md-floating-action-button:hover {
+  height: 26rem;
+  transition: height 0ms linear 0ms;
+}
+.md-app md-tab-content md-floating-action-button button.small,
+.md-app .md-form md-floating-action-button button.small {
+  transform: scale(0);
+}
+.md-app md-tab-content md-floating-action-button:hover button.small,
+.md-app .md-form md-floating-action-button:hover button.small {
+  transform: scale(1);
+}
+.md-app md-tab-content md-floating-action-button:hover button.small:nth-of-type(2),
+.md-app .md-form md-floating-action-button:hover button.small:nth-of-type(2) {
+  transition: transform 200ms ease-in-out 0ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button:hover button.small:nth-of-type(3),
+.md-app .md-form md-floating-action-button:hover button.small:nth-of-type(3) {
+  transition: transform 200ms ease-in-out 50ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button:hover button.small:nth-of-type(4),
+.md-app .md-form md-floating-action-button:hover button.small:nth-of-type(4) {
+  transition: transform 200ms ease-in-out 100ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button:hover button.small:nth-of-type(5),
+.md-app .md-form md-floating-action-button:hover button.small:nth-of-type(5) {
+  transition: transform 200ms ease-in-out 150ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button:hover button.small:nth-of-type(6),
+.md-app .md-form md-floating-action-button:hover button.small:nth-of-type(6) {
+  transition: transform 200ms ease-in-out 200ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button:hover button.small:nth-of-type(7),
+.md-app .md-form md-floating-action-button:hover button.small:nth-of-type(7) {
+  transition: transform 200ms ease-in-out 250ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button.small:nth-of-type(2),
+.md-app .md-form md-floating-action-button button.small:nth-of-type(2) {
+  transition: transform 200ms ease-in-out 1250ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button.small:nth-of-type(3),
+.md-app .md-form md-floating-action-button button.small:nth-of-type(3) {
+  transition: transform 200ms ease-in-out 1200ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button.small:nth-of-type(4),
+.md-app .md-form md-floating-action-button button.small:nth-of-type(4) {
+  transition: transform 200ms ease-in-out 1150ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button.small:nth-of-type(5),
+.md-app .md-form md-floating-action-button button.small:nth-of-type(5) {
+  transition: transform 200ms ease-in-out 1100ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button.small:nth-of-type(6),
+.md-app .md-form md-floating-action-button button.small:nth-of-type(6) {
+  transition: transform 200ms ease-in-out 1050ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button.small:nth-of-type(7),
+.md-app .md-form md-floating-action-button button.small:nth-of-type(7) {
+  transition: transform 200ms ease-in-out 1000ms, background 0.8s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), filter 100ms linear;
+}
+.md-app md-tab-content md-floating-action-button button,
+.md-app .md-form md-floating-action-button button {
+  text-transform: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  font-size: large;
+  border-radius: 100%;
+  width: 3.5rem;
+  height: 3.5rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  margin-bottom: 0.625rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--on-secondary-color);
+  background-color: var(--secondary-color);
+  margin-left: 0.4375rem;
+  line-height: 1rem;
+}
+.md-app md-tab-content md-floating-action-button button.small,
+.md-app .md-form md-floating-action-button button.small {
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  margin-left: 0.95rem;
+  margin-bottom: 1rem;
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+}
+.md-app md-tab-content button:enabled:hover,
+.md-app .md-form button:enabled:hover {
+  background: var(--button-color) radial-gradient(circle, transparent 1%, var(--button-color) 1%) center / 15000%;
+}
+.md-app md-tab-content button:enabled.outlined-btn:hover,
+.md-app .md-form button:enabled.outlined-btn:hover,
+.md-app md-tab-content button:enabled.text-btn:hover,
+.md-app .md-form button:enabled.text-btn:hover {
+  background: #0001 radial-gradient(circle, transparent 1%, #0001 1%) center / 15000%;
+}
+.md-app md-tab-content md-floating-action-button button:enabled:hover,
+.md-app .md-form md-floating-action-button button:enabled:hover {
+  background: var(--secondary-color) radial-gradient(circle, transparent 1%, var(--secondary-color) 1%) center / 15000%;
+}
+.md-app md-tab-content md-floating-action-button button.small:enabled:hover,
+.md-app .md-form md-floating-action-button button.small:enabled:hover {
+  background: var(--surface-color) radial-gradient(circle, transparent 1%, var(--surface-color) 1%) center / 15000%;
+}
+.md-app md-tab-content button:enabled:active,
+.md-app .md-form button:enabled:active {
+  background-color: white;
+  background-size: 100%;
+  transition: background 0s;
+}
+.md-app md-tab-content button:enabled.outlined-btn:active,
+.md-app .md-form button:enabled.outlined-btn:active,
+.md-app md-tab-content button:enabled.text-btn:active,
+.md-app .md-form button:enabled.text-btn:active,
+.md-app md-tab-content md-floating-action-button button:enabled:active,
+.md-app .md-form md-floating-action-button button:enabled:active,
+.md-app md-tab-content md-floating-action-button button.small:enabled:active,
+.md-app .md-form md-floating-action-button button.small:enabled:active {
+  background-color: #aaaaaa;
+  background-size: 100%;
+  transition: background 0s;
+}
+.md-app md-tab-content button:enabled.outlined-btn:active,
+.md-app .md-form button:enabled.outlined-btn:active,
+.md-app md-tab-content button:enabled.text-btn:active,
+.md-app .md-form button:enabled.text-btn:active {
+  background-color: transparent;
+}
+.md-app md-tab-content md-floating-action-button button:enabled:active,
+.md-app .md-form md-floating-action-button button:enabled:active {
+  background-color: #ffffff;
+}
+.md-app md-app-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+}
+.md-app md-app-bar > left,
+.md-app md-app-bar > right {
+  display: flex;
+}
+.md-app md-app-bar > left {
+  margin-left: 1rem;
+}
+.md-app md-app-bar > right {
+  margin-right: 1rem;
+}
+.md-app md-app-bar icon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.md-app md-app-bar title {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: 0.0075rem;
+  margin-left: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 500;
+  overflow: hidden;
+  word-wrap: none;
+  user-select: none;
+}
+.md-app md-drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  height: calc(100vh - (100vh - 100%));
+  min-width: 15rem;
+  z-index: 1000;
+  transform: translate(-100%, 0);
+  transition: transform 100ms ease-in-out;
+}
+.md-app md-drawer > top,
+.md-app md-drawer > bottom {
+  display: inline;
+}
+.md-app md-drawer button {
+  margin: 0px;
+  width: 100%;
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  padding: 0.625rem;
+  height: 2.875rem;
+  font-size: large;
+  text-align: left;
+  cursor: pointer;
+  background-color: transparent;
+}
+.md-app md-drawer button:disabled {
+  color: rgba(128, 128, 128, 0.5);
+}
+.md-app md-drawer button:not(:disabled):hover {
+  background-color: #0001;
+}
+.md-app md-drawer .drawer-header {
+  background-color: var(--primary-color);
+  position: relative;
+  width: 100%;
+  height: 8rem;
+}
+.md-app md-drawer .email {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--on-primary-color);
+  margin: 0.625rem;
+  bottom: 0;
+}
+.md-app md-drawer .avatar {
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px #0005;
+  margin: 0.625rem;
+  fill: #008cff;
+  background-color: #7ccfff;
+}
+.md-app .md-drawer-controller {
+  display: none;
+}
+.md-app .md-drawer-controller + label {
+  display: block;
+  cursor: pointer;
+  margin: auto;
+}
+.md-app .md-drawer-controller:checked + label + md-drawer {
+  transform: translate(0, 0);
+}
+.md-app .md-drawer-controller:checked + label::after {
+  content: '';
+  background-color: #0005;
+  position: fixed;
+  width: calc(100vw - (100vw - 100%));
+  height: calc(100vh - (100vh - 100%));
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.md-app md-menu {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+.md-app md-menu,
+.md-app md-menu md-submenu > div {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  top: 2rem;
+  border-radius: 4px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  z-index: 996;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform 100ms ease-in-out;
+  border: 1px solid #0001;
+  user-select: none;
+}
+.md-app md-menu button {
+  position: relative;
+  width: 100%;
+  border: none;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  height: 2rem;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: transparent;
+  font-size: medium;
+}
+.md-app md-menu button:disabled {
+  color: rgba(128, 128, 128, 0.5);
+}
+.md-app md-menu button:not(:disabled):hover {
+  box-shadow: none;
+  background-color: #0001;
+}
+.md-app md-menu md-submenu {
+  position: relative;
+}
+.md-app md-menu md-submenu div {
+  display: none;
+  position: absolute;
+  top: 0px;
+  margin-right: 0px;
+  transform: translateX(calc(100% + 1.19rem));
+}
+.md-app md-menu md-submenu > button:before {
+  content: 'arrow_right';
+  position: absolute;
+  right: 0px;
+  margin-top: 0.1rem;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1rem;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.md-app md-menu md-submenu:hover > div {
+  display: flex;
+}
+.md-app md-menu[left] {
+  transform-origin: top right;
+  right: 0px;
+}
+.md-app md-menu[left] md-submenu div {
+  transform: translateX(-100%);
+}
+.md-app .md-menu-controller {
+  display: none;
+}
+.md-app .md-menu-controller + label {
+  display: block;
+  cursor: pointer;
+  margin: auto;
+}
+.md-app .md-menu-controller:checked + label + md-menu {
+  transform: scale(1);
+}
+.md-app .md-menu-controller:checked + label:after {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 995;
+}
+.md-app md-tabs {
+  --tabs-color: var(--primary-color);
+  --tabs-text-color: var(--on-primary-color);
+  --tabs-active-text-color: var(--on-primary-color);
+  --tabs-active-underline-color: var(--secondary-color);
+  display: block;
+  margin: 0;
+  padding-top: 0;
+  background-color: var(--tabs-color);
+  height: 3rem;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Ripple Effect */
+}
+.md-app md-tabs md-tab {
+  user-select: none;
+}
+.md-app md-tabs md-tab > input {
+  display: none;
+}
+.md-app md-tabs md-tab > label {
+  background-color: var(--tabs-color);
+  margin: 0;
+  position: relative;
+  height: 3rem;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  color: var(--tabs-text-color);
+  padding-left: 32px;
+  padding-right: 32px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 13px;
+  background-position: center;
+  white-space: nowrap;
+}
+.md-app md-tabs md-tab > label span {
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.md-app md-tabs md-tab > input[type="radio"]:checked + label {
+  color: var(--tabs-active-text-color);
+  border-bottom: 0.125rem solid var(--tabs-active-underline-color);
+}
+.md-app md-tabs md-tab md-tab-content {
+  user-select: text;
+  display: block;
+  padding: 8px;
+  padding-top: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: normal;
+  margin: 0;
+  width: calc(100vw - (100vw - 100%));
+  position: absolute;
+  display: none;
+}
+.md-app md-tabs md-tab > input[type="radio"]:checked + label + md-tab-content {
+  display: block;
+}
+.md-app md-tabs md-tab > label {
+  transition: background 0.8s;
+  background: var(--tabs-color) radial-gradient(circle, transparent 1%, var(--tabs-color) 1%) center / 15000%;
+}
+.md-app md-tabs md-tab > label:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-position: center;
+}
+.md-app md-tabs md-tab > label:active {
+  background-color: var(--tabs-active-text-color);
+  background-position: center;
+}
+.md-app md-tabs.surface-color {
+  --tabs-color: var(--surface-color);
+  --tabs-text-color: var(--on-surface-color);
+  --tabs-active-text-color: var(--primary-color);
+  --tabs-active-underline-color: var(--primary-color);
+}
+.md-app md-tabs::-webkit-scrollbar {
+  display: none;
+}
+.md-app md-snack-bar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--snack-bar-background);
+  z-index: 1010;
+  color: var(--on-snack-bar);
+  border-radius: 4px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 32px;
+  transition: transform 200ms ease-out, opacity 200ms ease-out;
+  transform: translate(0px, 90px);
+  opacity: 0;
+}
+.md-app md-snack-bar text {
+  display: inline;
+  margin: auto 2rem auto 1rem;
+}
+.md-app md-snack-bar button {
+  margin: 8px;
+  height: 32px;
+}
+.md-app md-snack-bar.show {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.md-app md-dialog {
+  z-index: 1020;
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: opacity 100ms ease-in-out;
+}
+.md-app md-dialog md-card {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  min-width: 250px;
+  min-height: 50px;
+  transition: transform 100ms ease-out;
+  transform: translate(-50%, 0%);
+}
+.md-app md-dialog md-card md-card-title {
+  margin-top: 16px;
+}
+.md-app md-dialog.show md-card {
+  transform: translate(-50%, -50%);
+}
+.md-app md-dialog.show {
+  opacity: 1;
+}
+.md-app md-dialog:not(".dont-block")::before {
+  content: '';
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0005;
+}
+.md-app md-card {
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  color: var(--on-surface-color);
+  background-color: var(--surface-color);
+  border-radius: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3.25rem;
+  max-width: calc((100vw - (100vw - 100%)) - 16px);
+  border: 1px solid #0001;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.md-app md-card md-card-title-box {
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 0px;
+}
+.md-app md-card md-card-title {
+  display: inline-block;
+  margin-top: 0px;
+  vertical-align: top;
+  height: 100%;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.0125em;
+}
+.md-app md-card md-card-title > span {
+  display: block;
+  font-size: smaller;
+  color: var(--on-surface-color);
+  opacity: 0.5;
+}
+.md-app md-card md-card-content {
+  display: block;
+  margin-top: 0.6875rem;
+  margin-bottom: 0px;
+}
+.md-app md-card md-card-actions {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0.5rem;
+}
+.md-app icon {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.md-app .thumbnail {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+.md-app table {
+  background-color: var(--surface-color);
+  border: 1px solid lightgray;
+  overflow: hidden;
+  border-collapse: collapse;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
+}
+.md-app table th,
+.md-app table td {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 3.25rem;
+}
+.md-app table tbody tr {
+  border-top: 1px solid lightgray;
+}
+.md-app table tbody tr:hover {
+  background-color: #0001;
+}
+.md-app details {
+  color: var(--on-surface-color);
+  background-color: var(--surface-color);
+  border-radius: 4px;
+  border: 1px solid #0001;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
+}
+.md-app details summary {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.md-app details summary + * {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+}
+.md-app details summary::-webkit-details-marker {
+  display: none;
+}
+.md-app details summary:after {
+  content: 'expand_more';
+  position: absolute;
+  right: 1.5rem;
+  top: 20%;
+  transition: transform 100ms ease-in-out;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.md-app details[open] summary:after {
+  transform: rotate(-180deg);
+}
+.md-app details-group {
+  display: inline;
+}
+.md-app details-group details {
+  border-radius: 0px;
+}
+.md-app details-group details:first-of-type {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.md-app details-group details:last-of-type {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.md-app details-group details[open]:not(:first-of-type) {
+  margin-top: 1rem;
+}
+.md-app details-group details[open]:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+.md-app ul {
+  list-style: none;
+  padding: 0px;
+}
+.md-app ul li {
+  padding: 1rem;
+}
+.md-app ul li:not(:last-of-type) {
+  border-bottom: 1px solid lightgrey;
+}
+.md-app ul details {
+  background-color: transparent;
+  margin: -1rem;
+  box-shadow: none;
+  border: none;
+}
+.md-app ul details summary {
+  padding: 1rem;
+  font-weight: inherit;
+}
+.md-app ul details summary + * {
+  padding: 1rem;
+  padding-top: 0px;
+}
+.md-app ul details[open] summary {
+  color: var(--primary-color);
+}
+.md-app code {
+  color: var(--on-surface-color);
+  background: var(--surface-color);
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  line-height: 1.5;
+  border: 1px solid #0001;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px;
+}
+.md-app samp {
+  font-size: 0.9rem;
+  font-family: monospace;
+  background-color: #0001;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.md-app kbd {
+  border: solid 1px var(--on-surface-color);
+  border-radius: 4px;
+  padding: 0.125rem 0.25rem;
+  font-size: 0.9rem;
+}
+.md-app h1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.md-app h2 {
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.md-app h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.md-app h4 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.md-app h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.md-app h6 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.md-app p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.md-app hr {
+  border: none;
+  border-top: 1px solid lightgray;
+  width: 100%;
+}
+.md-app [tooltip] {
+  position: relative;
+}
+.md-app [tooltip]:after,
+.md-app [tooltip-left]:after,
+.md-app [tooltip-right]:after {
+  position: absolute;
+  color: #FFF;
+  background-color: #232F34BB;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  white-space: nowrap;
+  display: none;
+  font-size: 0.8rem;
+}
+.md-app [tooltip]:after {
+  content: attr(tooltip);
+  right: initial;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0.5rem);
+}
+.md-app [tooltip-left]:after {
+  content: attr(tooltip-left);
+  left: initial;
+  right: calc(100%);
+  top: 50%;
+  transform: translate(-0.5rem, -50%);
+}
+.md-app [tooltip-right].right:after {
+  content: attr(tooltip-right);
+  left: calc(100%);
+  right: initial;
+  top: 50%;
+  transform: translate(0.5rem, -50%);
+}
+.md-app [tooltip]:hover:after,
+.md-app [tooltip-left]:hover:after,
+.md-app [tooltip-right]:hover:after {
+  display: block;
+  position: absolute;
+}
+.md-app [elevation="0"],
+.md-app .elevation0 {
+  box-shadow: none !important;
+}
+.md-app [elevation="1"],
+.md-app .elevation1 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px, rgba(0, 0, 0, 0.2) 0px 1px 1px !important;
+}
+.md-app [elevation="2"],
+.md-app .elevation2 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 5px, rgba(0, 0, 0, 0.2) 0px 3px 2px !important;
+}
+.md-app [elevation="3"],
+.md-app .elevation3 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 7px, rgba(0, 0, 0, 0.2) 0px 5px 4px !important;
+}
