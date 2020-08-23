@@ -10,8 +10,13 @@ md-tabs {
     height                       : 3rem;
     width                        : 100%;
     overflow-x                   : auto;
-    -ms-overflow-style           : none;
+    overflow-y                   : hidden;
+    white-space                  : nowrap;
     scrollbar-width              : none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     md-tab {
         user-select: none;
@@ -97,8 +102,4 @@ md-tabs.surface-color {
     --tabs-text-color            : var(--on-surface-color);
     --tabs-active-text-color     : var(--primary-color);
     --tabs-active-underline-color: var(--primary-color);
-}
-
-md-tabs::-webkit-scrollbar {
-    display: none;
 }

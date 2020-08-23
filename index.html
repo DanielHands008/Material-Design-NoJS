@@ -15,52 +15,57 @@
 
     <md-app-bar elevation="3">
       <left>
-
-        <input class="md-drawer-controller" id="md-drawer-controller" type="checkbox"><label for="md-drawer-controller">
-          <icon class="material-icons">menu</icon>
-        </label>
-        <md-drawer>
-          <top>
-            <div class="drawer-header">
-              <div class="avatar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
-                  <ellipse ry="25" rx="25" cy="36" cx="50.5" />
-                  <ellipse ry="50" rx="50" cy="115" cx="50" /></svg>
+        <icon>
+          <input class="md-drawer-controller" id="md-drawer-controller" type="checkbox"><label for="md-drawer-controller">
+            <span class="material-icons">menu</span>
+          </label>
+          <md-drawer>
+            <top>
+              <div class="drawer-header">
+                <div class="avatar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
+                    <ellipse ry="25" rx="25" cy="36" cx="50.5" />
+                    <ellipse ry="50" rx="50" cy="115" cx="50" /></svg>
+                </div>
+                <div class="email">email@example.com</div>
               </div>
-              <div class="email">email@example.com</div>
-            </div>
-            <button>A button</button>
-            <button>A button</button>
-          </top>
-          <bottom>
-            <button>A button</button>
-          </bottom>
-        </md-drawer>
+              <button>A button</button>
+              <button>A button</button>
+            </top>
+            <bottom>
+              <button>A button</button>
+            </bottom>
+          </md-drawer>
+        </icon>
+
 
         <title>Title</title>
       </left>
       <right>
+        <icon class="material-icons">search</icon>
+        <icon>
+          <input type="checkbox" class="md-menu-controller" id="md-menu-controller"><label for="md-menu-controller">
+            <span class="material-icons">more_vert</span>
+          </label>
+          <md-menu left class="test">
+            <!-- The Menu -->
+            <button>Menu Item 1</button>
+            <button>Menu Item 2</button>
+            <hr>
+            <button>Menu Item 3</button>
+            <button disabled>Menu Item Disabled</button>
+            <md-submenu>
+              <button>Sub-Menu</button>
+              <div>
+                <!-- Sub Menu Items -->
+                <button>Sub-Menu Item 1</button>
+                <button>Sub-Menu Item 2</button>
+                <button>Sub-Menu Item 3</button>
+              </div>
+            </md-submenu>
+          </md-menu>
+        </icon>
 
-        <input type="checkbox" class="md-menu-controller" id="md-menu-controller"><label for="md-menu-controller">
-          <icon class="material-icons">more_vert</icon>
-        </label>
-        <md-menu left class="test">
-          <!-- The Menu -->
-          <button>Menu Item 1</button>
-          <button>Menu Item 2</button>
-          <hr>
-          <button>Menu Item 3</button>
-          <button disabled>Menu Item Disabled</button>
-          <md-submenu>
-            <button>Sub-Menu</button>
-            <div>
-              <!-- Sub Menu Items -->
-              <button>Sub-Menu Item 1</button>
-              <button>Sub-Menu Item 2</button>
-              <button>Sub-Menu Item 3</button>
-            </div>
-          </md-submenu>
-        </md-menu>
 
 
       </right>
@@ -68,8 +73,7 @@
 
     <md-tabs elevation="3">
       <md-tab>
-        <input type="radio" name="tabs1" id="tab1" class="md-tab-controller" checked><label for="tab1"><span>TAB
-            1</span></label>
+        <input type="radio" name="tabs1" id="tab1" class="md-tab-controller" checked><label for="tab1"><span>Forms</span></label>
         <md-tab-content>
 
 
@@ -78,14 +82,18 @@
           <button class="outlined-btn">Outlined Button</button>
           <button class="text-btn">Text Button</button>
           <button class="text-btn" style="--button-text-color: var(--on-surface-color);">Text Button</button>
+          <br>
           <button style="--button-color: var(--secondary-color)">Button</button>
           <button style="--button-color: var(--secondary-color)" elevation="0">Button</button>
-          <button
-            style="--button-color: var(--surface-color); --button-text-color: var(--on-surface-color)">Button</button>
+          <button style="--button-color: var(--surface-color); --button-text-color: var(--on-surface-color)">Button</button>
           <button class="outlined-btn" style="--button-color: var(--secondary-color)">Outlined Button</button>
+          <br>
           <button disabled>Button</button>
           <button disabled class="outlined-btn">Outlined Button</button>
           <button disabled class="text-btn">Text Button</button>
+          <br>
+          <button><icon class="material-icons">face</icon>Icon Button</button>
+          <button class="text-btn"><icon class="material-icons">save</icon>Icon Button</button>
           <br>
           <br>
           <!-- data-lpignore="true" is to prevent Lastpass autofill. Its here to stop Lastpass asking constantly to save the password when making changes. -->
@@ -160,8 +168,7 @@
       </md-tab>
 
       <md-tab>
-        <input type="radio" name="tabs1" id="tab2" class="md-tab-controller"><label for="tab2"><span>TAB
-            2</span></label>
+        <input type="radio" name="tabs1" id="tab2" class="md-tab-controller"><label for="tab2"><span>Cards</span></label>
         <md-tab-content>
 
           <md-card style="width: 500px;" elevation="2">
@@ -195,8 +202,7 @@
       </md-tab>
 
       <md-tab>
-        <input type="radio" name="tabs1" id="tab3" class="md-tab-controller"><label for="tab3"><span>TAB
-            3</span></label>
+        <input type="radio" name="tabs1" id="tab3" class="md-tab-controller"><label for="tab3"><span>Layout</span></label>
         <md-tab-content>
           <table elevation="1">
             <thead>
@@ -287,8 +293,7 @@
       </md-tab>
 
       <md-tab>
-        <input type="radio" name="tabs1" id="tab4" class="md-tab-controller"><label for="tab4"><span>TAB
-            4</span></label>
+        <input type="radio" name="tabs1" id="tab4" class="md-tab-controller"><label for="tab4"><span>Misc</span></label>
         <md-tab-content>
           <p><span tooltip="Tooltip">Tooltip.</span></p>
           <pre><code elevation="1">#header h1 a {
@@ -303,8 +308,7 @@
       </md-tab>
 
       <md-tab>
-        <input type="radio" name="tabs1" id="tab5" class="md-tab-controller"><label for="tab5"><span>TAB
-            5</span></label>
+        <input type="radio" name="tabs1" id="tab5" class="md-tab-controller"><label for="tab5"><span>Text</span></label>
         <md-tab-content>
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
@@ -329,18 +333,17 @@
       </md-tab>
 
       <md-tab>
-        <input type="radio" name="tabs1" id="tab6" class="md-tab-controller"><label for="tab6"><span>TAB
-            6</span></label>
+        <input type="radio" name="tabs1" id="tab6" class="md-tab-controller"><label for="tab6"><span>Popups</span></label>
         <md-tab-content>
 
-          <md-snack-bar class="show dont-block">
-            <text>
+          <md-snack-bar class="show">
+            <span>
               Snack bar demo, remove the "show" class to hide.
-            </text>
-            <button style="margin: 8px; height: 32px;" class="text-btn">undo</button>
+            </span>
+            <button class="text-btn">undo</button>
           </md-snack-bar>
 
-          <md-dialog class="show">
+          <md-dialog class="show dont-block">
             <md-card elevation="3" style="max-width: 400px">
 
               <md-card-title>Dialog Title</md-card-title>
@@ -366,8 +369,7 @@
       </md-tab>
 
       <md-tab>
-        <input type="radio" name="tabs1" id="tab7" class="md-tab-controller"><label for="tab7"><span>TAB
-            7</span></label>
+        <input type="radio" name="tabs1" id="tab7" class="md-tab-controller"><label for="tab7"><span>Icons</span></label>
         <md-tab-content>
           <span class="material-icons" style="font-size: 2rem;">skip_previous<span style="letter-spacing: -.35em;">play_arrow pause</span> stop skip_next</span>
         </md-tab-content>

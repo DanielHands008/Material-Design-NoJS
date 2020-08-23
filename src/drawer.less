@@ -1,24 +1,29 @@
 md-drawer {
-    display         : flex;
-    flex-direction  : column;
-    justify-content : space-between;
-    position        : fixed;
-    left            : 0;
-    top             : 0;
-    background-color: var(--surface-color);
-    color           : var(--on-surface-color);
-    height          : calc(100vh - (100vh - 100%));
-    min-width       : 15rem;
-    z-index         : 1000;
-    transform       : translate(-100%, 0);
-    transition      : transform 100ms ease-in-out;
+    --drawer-offset-top: 0px;
+    display            : flex;
+    flex-direction     : column;
+    justify-content    : space-between;
+    position           : fixed;
+    left               : 0;
+    top                : var(--drawer-offset-top);
+    background-color   : var(--surface-color);
+    color              : var(--on-surface-color);
+    height             : calc(100vh - (100vh - 100%) - var(--drawer-offset-top));
+    min-width          : 15rem;
+    z-index            : 1000;
+    transform          : translate(-100%, 0);
+    transition         : transform 100ms ease-in-out;
+    font-size: 1rem;
 
     >top,
     >bottom {
         display: inline;
     }
 
+
     button {
+        all               : unset;
+        box-shadow        : none !important;
         margin            : 0px;
         width             : 100%;
         border            : none;
@@ -30,7 +35,7 @@ md-drawer {
         -moz-box-sizing   : border-box;
         -webkit-box-sizing: border-box;
         font-family       : Roboto, sans-serif;
-        padding           : 0.625rem;
+        padding-left      : 0.625rem;
         height            : 2.875rem;
         font-size         : large;
         text-align        : left;
@@ -43,6 +48,11 @@ md-drawer {
 
         &:not(:disabled):hover {
             background-color: #0001;
+        }
+
+
+        &:active {
+            background: #0002 !important;
         }
 
     }

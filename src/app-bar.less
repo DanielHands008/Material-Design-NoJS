@@ -12,16 +12,30 @@ md-app-bar {
     }
 
     >left {
-        margin-left: 1rem;
+        margin-left: .25rem;
     }
 
     >right {
-        margin-right: 1rem;
+        margin-right: .25rem;
     }
 
     icon {
+        font-size    : 1.5rem;
         margin-top   : auto;
         margin-bottom: auto;
+        width        : 1em;
+        height       : 1em;
+        margin-right : .75rem;
+        margin-left  : .75rem;
+    }
+
+    icon label {
+        width : 1em;
+        height: 1em;
+    }
+
+    icon.button {
+        cursor: pointer;
     }
 
     title {
@@ -36,6 +50,5 @@ md-app-bar {
         overflow      : hidden;
         word-wrap     : none;
         user-select   : none;
-        // Fix spacing
     }
 }

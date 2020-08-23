@@ -13,7 +13,7 @@ md-menu {
         border-radius   : 4px;
         padding-top     : .5rem;
         padding-bottom  : .5rem;
-        z-index         : 996;
+        z-index         : 1031;
         transform       : scale(0);
         transform-origin: top left;
         transition      : transform 100ms ease-in-out;
@@ -22,8 +22,12 @@ md-menu {
     }
 
     button {
+        all             : unset;
+        box-shadow      : none !important;
+        box-sizing      : border-box;
         position        : relative;
-        width           : 100%;
+        max-width       : 100% !important;
+        min-width       : 100% !important;
         border          : none;
         padding-left    : 1rem;
         padding-right   : 2rem;
@@ -34,13 +38,24 @@ md-menu {
         background-color: transparent;
         font-size       : medium;
 
-        &:disabled {
-            color: rgba(128, 128, 128, .5);
-        }
+
 
         &:not(:disabled):hover {
             box-shadow      : none;
             background-color: #0001;
+        }
+
+        &:active {
+            background: #0002 !important;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:disabled {
+            color     : rgba(128, 128, 128, .5) !important;
+            background: none !important;
         }
     }
 
@@ -54,43 +69,44 @@ md-menu {
             margin-right: 0px;
             transform   : translateX(calc(100% + 1.19rem));
         }
+
+        &>button:before {
+            content   : 'arrow_right';
+            display   : inline-block;
+            position  : absolute;
+            right     : 0px;
+            margin-top: 0.1rem;
+
+            font-family   : 'Material Icons';
+            font-weight   : normal;
+            font-style    : normal;
+            font-size     : 2rem;
+            /* Preferred icon size */
+            display       : inline-block;
+            line-height   : 1rem;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap     : normal;
+            white-space   : nowrap;
+            direction     : ltr;
+
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering        : optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+        &:hover>div {
+            display: flex;
+        }
     }
 
-    md-submenu>button:before {
-        content   : 'arrow_right';
-        display   : inline-block;
-        position  : absolute;
-        right     : 0px;
-        margin-top: 0.1rem;
-
-        font-family   : 'Material Icons';
-        font-weight   : normal;
-        font-style    : normal;
-        font-size     : 2rem;
-        /* Preferred icon size */
-        display       : inline-block;
-        line-height   : 1rem;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap     : normal;
-        white-space   : nowrap;
-        direction     : ltr;
-
-        /* Support for all WebKit browsers. */
-        -webkit-font-smoothing: antialiased;
-        /* Support for Safari and Chrome. */
-        text-rendering        : optimizeLegibility;
-
-        /* Support for Firefox. */
-        -moz-osx-font-smoothing: grayscale;
-
-        /* Support for IE. */
-        font-feature-settings: 'liga';
-    }
-
-    md-submenu:hover>div {
-        display: flex;
-    }
 }
 
 md-menu[left] {
@@ -126,5 +142,5 @@ md-menu[left] {
     top     : 0;
     left    : 0;
     opacity : 0;
-    z-index : 995;
+    z-index : 1030;
 }
