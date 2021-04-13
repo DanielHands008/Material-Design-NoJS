@@ -190,11 +190,11 @@ button {
     }
 
     icon {
-        font-size: 1.2rem;
+        font-size     : 1.2rem;
         vertical-align: top;
-        margin-right: .25em;
-        margin-top: .15rem;
-        margin-left: 0;
+        margin-right  : .25em;
+        margin-top    : .15rem;
+        margin-left   : 0;
     }
 }
 
@@ -432,6 +432,80 @@ md-floating-action-button {
     }
 
 }
+
+
+label.md-icon-toggle {
+    cursor : pointer;
+    display: inline;
+    direction: ltr;
+
+    --unchecked-color: var(--on-surface-color);
+    --checked-color  : var(--secondary-color);
+
+    input[type="checkbox"] {
+        & {
+            display: none;
+
+            &+icon {
+                display: none;
+                color  : var(--unchecked-color);
+
+                &+icon {
+                    display: inline;
+                    color  : var(--checked-color);
+                }
+            }
+        }
+
+        &:checked {
+            &+icon {
+                display: inline;
+
+                &+icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+input[type="checkbox"].md-icon-toggle {
+
+    display: none;
+
+    &+label:before {
+        display: none !important;
+    }
+
+    &+label {
+        direction: ltr;
+    }
+
+    &+label>icon {
+
+        --unchecked-color: var(--on-surface-color);
+        --checked-color  : var(--secondary-color);
+
+        display: none;
+        color  : var(--unchecked-color);
+
+        &+icon {
+            display: inline;
+            color  : var(--checked-color);
+        }
+    }
+
+    &:checked+label>icon {
+
+        display: inline;
+
+        &+icon {
+            display: none;
+        }
+
+    }
+}
+
 
 /* Ripple effect */
 button:enabled:hover {

@@ -468,6 +468,55 @@
   background-color: var(--surface-color);
   color: var(--on-surface-color);
 }
+.md-app label.md-icon-toggle {
+  cursor: pointer;
+  display: inline;
+  direction: ltr;
+  --unchecked-color: var(--on-surface-color);
+  --checked-color: var(--secondary-color);
+}
+.md-app label.md-icon-toggle input[type="checkbox"] {
+  display: none;
+}
+.md-app label.md-icon-toggle input[type="checkbox"] + icon {
+  display: none;
+  color: var(--unchecked-color);
+}
+.md-app label.md-icon-toggle input[type="checkbox"] + icon + icon {
+  display: inline;
+  color: var(--checked-color);
+}
+.md-app label.md-icon-toggle input[type="checkbox"]:checked + icon {
+  display: inline;
+}
+.md-app label.md-icon-toggle input[type="checkbox"]:checked + icon + icon {
+  display: none;
+}
+.md-app input[type="checkbox"].md-icon-toggle {
+  display: none;
+}
+.md-app input[type="checkbox"].md-icon-toggle + label:before {
+  display: none !important;
+}
+.md-app input[type="checkbox"].md-icon-toggle + label {
+  direction: ltr;
+}
+.md-app input[type="checkbox"].md-icon-toggle + label > icon {
+  --unchecked-color: var(--on-surface-color);
+  --checked-color: var(--secondary-color);
+  display: none;
+  color: var(--unchecked-color);
+}
+.md-app input[type="checkbox"].md-icon-toggle + label > icon + icon {
+  display: inline;
+  color: var(--checked-color);
+}
+.md-app input[type="checkbox"].md-icon-toggle:checked + label > icon {
+  display: inline;
+}
+.md-app input[type="checkbox"].md-icon-toggle:checked + label > icon + icon {
+  display: none;
+}
 .md-app button:enabled:hover {
   background: var(--button-color) radial-gradient(circle, transparent 1%, var(--button-color) 1%) center / 15000%;
 }
@@ -839,6 +888,10 @@
 .md-app md-snack-bar.show {
   transform: translate(0px, 0px);
   opacity: 1;
+}
+.md-app md-snack-bar.right-side {
+  left: auto;
+  right: 0;
 }
 .md-app md-dialog {
   z-index: 1020;
