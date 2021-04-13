@@ -965,7 +965,7 @@
   line-height: 2rem;
   letter-spacing: 0.0125em;
 }
-.md-app md-card md-card-title > span {
+.md-app md-card md-card-title md-card-subtitle {
   display: block;
   font-size: smaller;
   color: var(--on-surface-color);
