@@ -447,11 +447,11 @@ label.md-icon-toggle {
             display: none;
 
             &+icon {
-                display: none;
+                display: inline;
                 color  : var(--unchecked-color);
 
                 &+icon {
-                    display: inline;
+                    display: none;
                     color  : var(--checked-color);
                 }
             }
@@ -459,10 +459,10 @@ label.md-icon-toggle {
 
         &:checked {
             &+icon {
-                display: inline;
+                display: none;
 
                 &+icon {
-                    display: none;
+                    display: inline;
                 }
             }
         }
@@ -486,21 +486,21 @@ input[type="checkbox"].md-icon-toggle {
         --unchecked-color: var(--on-surface-color);
         --checked-color  : var(--secondary-color);
 
-        display: none;
+        display: inline;
         color  : var(--unchecked-color);
 
         &+icon {
-            display: inline;
+            display: none;
             color  : var(--checked-color);
         }
     }
 
     &:checked+label>icon {
 
-        display: inline;
+        display: none;
 
         &+icon {
-            display: none;
+            display: inline;
         }
 
     }
